@@ -1,5 +1,5 @@
 Feature: Reinstate Fleet feature
-Scenario: IRP Reinstate fleet
+Scenario: IRP Reinstate fleet edge
 Given User login as an Internal user
 When User will navigate to IRP & Reinstate Fleet
 Then User will provide all the inputs & select the record on the grid

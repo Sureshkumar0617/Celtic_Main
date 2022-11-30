@@ -104,7 +104,7 @@ public class RWC001 {
 		screenshotUtil.captureScreenshot(className,"Password");
 		loginpage.clickLoginBtn();
 		ConfigReader.getLogInfo("*** Click Login ***");
-		screenshotUtil.captureScreenshot(className,"Login");
+		screenshotUtil.captureScreenshot(className,"Login"); 
 	}
 		
 	
@@ -999,7 +999,9 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		ConfigReader.getLogInfo("*** Click Recalculate ***");
 		screenshotUtil.captureScreenshot(className,"Click Recalculate");
 		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
+		Thread.sleep(2000);
 		billingtab.expandFeeOverrideReason();
+		Thread.sleep(2000);
 
 		billingtab.enterFeeOverrideReasonComments(excelutil.getCellData("BillingTab","FeeOverrideReasonComments",readRowNo));
 

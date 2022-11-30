@@ -22,29 +22,30 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import io.cucumber.java.en.Given;
+import lombok.Value;
 
 public class ApplicationHooks {
 
 	private DriverFactory driverFactory;
 	private WebDriver driver;
-	//public static Logger log = LogManager.getLogger(ApplicationHooks.class);
+	//public static Logger log = LogManager.getLogger(ApplicationHooks.class); 
 	Properties prop;
 	private ConfigReader config =new ConfigReader();
 	public static Scenario scenario;
 
 	@Before
 	public void launchBrowser(Scenario scenario) throws IOException {
-		
-				
+		String browser=null;
+		if(scenario.getName().contains("chrome")) {
+			browser="chrome";
+		}else if(scenario.getName().contains("edge")) {
+			browser="edge";
+		}
 
 		driverFactory = new DriverFactory();
 		config.initprop();
-		try {
-			driver = driverFactory.initdriver(config.readBrowser());
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-
-		}
+		driver = driverFactory.initdriver(browser);
 
 
 	}

@@ -12,6 +12,7 @@ import com.celtic.automation.cmcs.pages.FleetPage;
 import com.celtic.automation.cmcs.pages.LoginPage;
 import com.celtic.automation.cmcs.pages.Reinstatement;
 import com.celtic.automation.cmcs.util.ConfigReader;
+import com.celtic.automation.cmcs.util.ElementUtil;
 import com.celtic.automation.cmcs.util.ReadExcelUtil;
 import com.celtic.automation.cmcs.util.ScreenshotUtility;
 import com.celtic.automation.cmcs.util.WriteExcelUtil;
@@ -27,6 +28,7 @@ public class RIN001 {
 	private CommonObjects commonobjects = new CommonObjects(DriverFactory.getDriver());
 	private BillingTab billingtab = new BillingTab(DriverFactory.getDriver());
 	private ConfigReader config=new ConfigReader();
+	private ElementUtil eleutil;
 	private	int readRowNo=3;
 	private int writeRowNo=4;
 	private ReadExcelUtil excelutil=null;
@@ -39,27 +41,29 @@ public class RIN001 {
 @Given("User login as an Internal user")
 public void user_login_as_an_internal_user() throws Exception {
 	
-	String test = new Throwable().getStackTrace()[0].getClassName();
-	String path =System.getProperty("user.dir")+"\\log"+test;
-	System.setProperty("file.path.can",path);
-	log = LogManager.getLogger(test);
-	config.initprop();
-	//excelutil = new ReadExcelUtil(config.readRwcExcel());
+		//excelutil = new ReadExcelUtil(config.readRwcExcel());
 	//excelutilWrite=new WriteExcelUtil();
+	
+	config.loggerConfigurator(new Throwable().getStackTrace()[0].getClassName());
+	config.initprop();
+	excelutil = new ReadExcelUtil(config.readRwcExcel(),ConfigReader.log);
+	excelutilWrite=new WriteExcelUtil(ConfigReader.log);
+	eleutil =new ElementUtil(ConfigReader.log);
+
 	excelutilWrite.setCellData(config.writeRinExcel(),"Sheet1","Account",writeRowNo,"30942");
 
 	CommonStep.scenario.log("Launch the application using URL and login with valid credentials");
 	DriverFactory.getDriver().get(config.readLoginURL());
-	log.info("****************************** Login to the application  *****************************************");
+	ConfigReader.getLogInfo("****************************** Login to the application  *****************************************");
 	screenshotUtil.captureScreenshot(className,"ApplicationLogin");
 	loginpage.enterUsername(config.readLoginInternalUser());
-	log.info("*** Enter Username ***");
+	ConfigReader.getLogInfo("*** Enter Username ***");
 	screenshotUtil.captureScreenshot(className,"Username");
 	loginpage.enterPassword(config.readPswrd());
-	log.info("*** Enter Password ***");
+	ConfigReader.getLogInfo("*** Enter Password ***");
 	screenshotUtil.captureScreenshot(className,"Password");
 	loginpage.clickLoginBtn();
-	log.info("*** Click Login ***");
+	ConfigReader.getLogInfo("*** Click Login ***");
 	screenshotUtil.captureScreenshot(className,"Login");
 }
 	@When("User will navigate to IRP & Reinstate Fleet")

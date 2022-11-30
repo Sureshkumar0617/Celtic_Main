@@ -15,6 +15,7 @@ public class ConfigReader {
 	public  Properties prop;
 	
  public static Logger log ;
+ 
 	HashMap<String,String> hs= new HashMap<String,String>();
 	String fileName="./src/test/resources/config/config.properties";
 	

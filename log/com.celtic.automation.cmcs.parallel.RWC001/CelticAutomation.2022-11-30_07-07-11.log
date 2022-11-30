@@ -1,0 +1,57 @@
+[INFO ] 2022-11-30 19:07:11.551 [main] RWC001 - Opened Browser
+[INFO ] 2022-11-30 19:07:22.290 [main] RWC001 - ****************************** Login to the application  *****************************************
+[INFO ] 2022-11-30 19:07:22.711 [main] RWC001 - *** Enter Username ***
+[INFO ] 2022-11-30 19:07:23.113 [main] RWC001 - *** Enter Password ***
+[INFO ] 2022-11-30 19:07:25.606 [main] RWC001 - *** Click Login ***
+[INFO ] 2022-11-30 19:07:44.360 [main] RWC001 - *** Click IRP ***
+[INFO ] 2022-11-30 19:07:45.924 [main] RWC001 - *** Click RenewFleet ***
+[INFO ] 2022-11-30 19:07:46.624 [main] RWC001 - *** Enter Account Number ***
+[INFO ] 2022-11-30 19:07:47.027 [main] RWC001 - *** Enter FleetNo ***
+[INFO ] 2022-11-30 19:07:47.407 [main] RWC001 - *** Click FleetYear ***
+[INFO ] 2022-11-30 19:07:50.975 [main] RWC001 - IRPFLT143 : [W] Fleet information [USDOT No., TPID] in the system does not match with the MCE information.
+[INFO ] 2022-11-30 19:07:58.988 [main] RWC001 - *** Check Email Notification ***
+[INFO ] 2022-11-30 19:08:00.283 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-30 19:08:25.521 [main] RWC001 - GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+[INFO ] 2022-11-30 19:08:25.668 [main] RWC001 - Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+[INFO ] 2022-11-30 19:08:25.957 [main] RWC001 - *** navigateToServiceProvider ***
+[INFO ] 2022-11-30 19:08:26.345 [main] RWC001 - *** Click PowerofAttroney ***
+[INFO ] 2022-11-30 19:08:26.841 [main] RWC001 - *** Entering the Emailid ***
+[INFO ] 2022-11-30 19:08:27.084 [main] RWC001 - Date is retrieved
+[INFO ] 2022-11-30 19:08:27.122 [main] RWC001 - *** Selecting the Expiration Date ***
+[INFO ] 2022-11-30 19:08:27.486 [main] RWC001 - *** Selecting the IRPRequirementForm ***
+[INFO ] 2022-11-30 19:08:27.808 [main] RWC001 - *** Selecting StatementofUnderstanding ***
+[INFO ] 2022-11-30 19:08:28.104 [main] RWC001 - *** Selecting InstallmentAgreement ***
+[INFO ] 2022-11-30 19:08:28.409 [main] RWC001 - *** Selecting PowerOfAttroney ***
+[INFO ] 2022-11-30 19:08:28.685 [main] RWC001 - *** Selecting HVUTForm ***
+[INFO ] 2022-11-30 19:08:28.990 [main] RWC001 - *** Selecting PropertyTax ***
+[INFO ] 2022-11-30 19:08:30.208 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-30 19:09:21.112 [main] RWC001 - IRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-30 19:09:21.158 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-30 19:09:21.452 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-30 19:09:22.506 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-30 19:09:31.566 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-30 19:09:31.566 [main] RWC001 - Weight Group RowDatavalues1
+[INFO ] 2022-11-30 19:09:31.599 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-30 19:09:31.599 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-30 19:09:31.633 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-30 19:09:31.634 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-30 19:09:31.670 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-30 19:09:31.670 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-30 19:09:31.700 [main] RWC001 - Weight Group headervalues
+[INFO ] 2022-11-30 19:09:31.700 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-30 19:09:31.739 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-30 19:09:31.740 [main] RWC001 - Weight Group RowDatavalues2
+[INFO ] 2022-11-30 19:09:31.783 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-30 19:09:31.783 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-30 19:09:31.817 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-30 19:09:31.817 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-30 19:09:31.852 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-30 19:09:31.852 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-30 19:09:31.886 [main] RWC001 - Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+[INFO ] 2022-11-30 19:09:31.886 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-30 19:09:31.987 [main] RWC001 - IRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-30 19:09:32.020 [main] RWC001 - Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-30 19:09:34.481 [main] RWC001 - *** Click AddweightGroup ***
+[INFO ] 2022-11-30 19:09:34.879 [main] RWC001 - *** Select WeightGroupType ***
+[INFO ] 2022-11-30 19:09:35.320 [main] RWC001 - *** Enter WeightGroup No ***
+[INFO ] 2022-11-30 19:09:35.574 [main] RWC001 - *** Select MaxGross Weight ***
