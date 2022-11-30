@@ -1,0 +1,16 @@
+[INFO ] 2022-11-29 21:23:03.562 [main] RWC001 - Opened Browser
+[INFO ] 2022-11-29 21:23:32.576 [main] RWC001 - ****************************** Login to the application  *****************************************
+[INFO ] 2022-11-29 21:23:33.153 [main] RWC001 - *** Enter Username ***
+[INFO ] 2022-11-29 21:23:33.630 [main] RWC001 - *** Enter Password ***
+[INFO ] 2022-11-29 21:23:37.603 [main] RWC001 - *** Click Login ***
+[INFO ] 2022-11-29 21:24:27.716 [main] RWC001 - *** Click IRP ***
+[INFO ] 2022-11-29 21:24:30.493 [main] RWC001 - *** Click RenewFleet ***
+[INFO ] 2022-11-29 21:24:31.354 [main] RWC001 - *** Enter Account Number ***
+[INFO ] 2022-11-29 21:24:31.869 [main] RWC001 - *** Enter FleetNo ***
+[INFO ] 2022-11-29 21:24:32.343 [main] RWC001 - *** Click FleetYear ***
+[INFO ] 2022-11-29 21:24:36.107 [main] RWC001 - IRPSUPP13 : [E] You cannot do this supplement because next year's renewal/reinstatement has started.
+[INFO ] 2022-11-29 21:25:36.567 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 21:26:37.468 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 21:27:38.222 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 21:28:08.650 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 21:29:09.297 [main] RWC001 - Testing writeexcel

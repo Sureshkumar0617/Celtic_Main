@@ -1,22 +1,23 @@
 package com.celtic.automation.cmcs.apphooks;
 
 
-import java.io.File;
-import java.io.IOException;
+import java.io.File;import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeSuite;
+
 import com.celtic.automation.cmcs.factory.DriverFactory;
 import com.celtic.automation.cmcs.util.ConfigReader;
 import com.celtic.automation.cmcs.util.ElementUtil;
 import com.celtic.automation.cmcs.util.GenericFunctions;
+
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -26,20 +27,23 @@ public class ApplicationHooks {
 
 	private DriverFactory driverFactory;
 	private WebDriver driver;
+	//public static Logger log = LogManager.getLogger(ApplicationHooks.class);
 	Properties prop;
 	private ConfigReader config =new ConfigReader();
-	private static Logger log ;
 	public static Scenario scenario;
 
 	@Before
 	public void launchBrowser(Scenario scenario) throws IOException {
+		
+				
+
 		driverFactory = new DriverFactory();
 		config.initprop();
 		try {
 			driver = driverFactory.initdriver(config.readBrowser());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			log.error("Error in init_prop"+e);
+
 		}
 
 
@@ -86,6 +90,5 @@ public class ApplicationHooks {
 	
 		}
 	}
-
 }
-
+	

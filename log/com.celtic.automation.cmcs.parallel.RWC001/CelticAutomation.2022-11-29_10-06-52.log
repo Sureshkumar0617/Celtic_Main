@@ -1,0 +1,96 @@
+[INFO ] 2022-11-29 22:06:52.312 [main] RWC001 - Opened Browser
+[INFO ] 2022-11-29 22:07:10.384 [main] RWC001 - ****************************** Login to the application  *****************************************
+[INFO ] 2022-11-29 22:07:10.856 [main] RWC001 - *** Enter Username ***
+[INFO ] 2022-11-29 22:07:11.282 [main] RWC001 - *** Enter Password ***
+[INFO ] 2022-11-29 22:07:13.695 [main] RWC001 - *** Click Login ***
+[INFO ] 2022-11-29 22:07:46.156 [main] RWC001 - *** Click IRP ***
+[INFO ] 2022-11-29 22:07:48.147 [main] RWC001 - *** Click RenewFleet ***
+[INFO ] 2022-11-29 22:07:48.862 [main] RWC001 - *** Enter Account Number ***
+[INFO ] 2022-11-29 22:07:49.321 [main] RWC001 - *** Enter FleetNo ***
+[INFO ] 2022-11-29 22:07:49.714 [main] RWC001 - *** Click FleetYear ***
+[INFO ] 2022-11-29 22:07:53.339 [main] RWC001 - IRPFLT143 : [W] Fleet information [USDOT No., TPID] in the system does not match with the MCE information.
+[INFO ] 2022-11-29 22:08:02.927 [main] RWC001 - *** Check Email Notification ***
+[INFO ] 2022-11-29 22:08:04.257 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 22:08:31.830 [main] RWC001 - GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+[INFO ] 2022-11-29 22:08:32.011 [main] RWC001 - Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+[INFO ] 2022-11-29 22:08:32.300 [main] RWC001 - *** navigateToServiceProvider ***
+[INFO ] 2022-11-29 22:08:32.656 [main] RWC001 - *** Click PowerofAttroney ***
+[INFO ] 2022-11-29 22:08:33.163 [main] RWC001 - *** Entering the Emailid ***
+[INFO ] 2022-11-29 22:08:33.392 [main] RWC001 - Date is retrieved
+[INFO ] 2022-11-29 22:08:33.452 [main] RWC001 - *** Selecting the Expiration Date ***
+[INFO ] 2022-11-29 22:08:33.837 [main] RWC001 - *** Selecting the IRPRequirementForm ***
+[INFO ] 2022-11-29 22:08:34.216 [main] RWC001 - *** Selecting StatementofUnderstanding ***
+[INFO ] 2022-11-29 22:08:34.554 [main] RWC001 - *** Selecting InstallmentAgreement ***
+[INFO ] 2022-11-29 22:08:34.894 [main] RWC001 - *** Selecting PowerOfAttroney ***
+[INFO ] 2022-11-29 22:08:35.234 [main] RWC001 - *** Selecting HVUTForm ***
+[INFO ] 2022-11-29 22:08:35.562 [main] RWC001 - *** Selecting PropertyTax ***
+[INFO ] 2022-11-29 22:08:36.898 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 22:09:31.796 [main] RWC001 - IRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 22:09:31.851 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 22:09:32.192 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 22:09:33.309 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 22:09:42.962 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-29 22:09:42.962 [main] RWC001 - Weight Group RowDatavalues1
+[INFO ] 2022-11-29 22:09:43.023 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-29 22:09:43.023 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-29 22:09:43.095 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-29 22:09:43.095 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-29 22:09:43.161 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-29 22:09:43.162 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-29 22:09:43.239 [main] RWC001 - Weight Group headervalues
+[INFO ] 2022-11-29 22:09:43.239 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-29 22:09:43.277 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-29 22:09:43.277 [main] RWC001 - Weight Group RowDatavalues2
+[INFO ] 2022-11-29 22:09:43.326 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-29 22:09:43.326 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-29 22:09:43.384 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-29 22:09:43.384 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-29 22:09:43.455 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-29 22:09:43.456 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-29 22:09:43.525 [main] RWC001 - Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+[INFO ] 2022-11-29 22:09:43.525 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-29 22:09:43.660 [main] RWC001 - IRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-29 22:09:43.716 [main] RWC001 - Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-29 22:09:46.678 [main] RWC001 - *** Click AddweightGroup ***
+[INFO ] 2022-11-29 22:09:47.122 [main] RWC001 - *** Select WeightGroupType ***
+[INFO ] 2022-11-29 22:09:47.613 [main] RWC001 - *** Enter WeightGroup No ***
+[INFO ] 2022-11-29 22:09:47.911 [main] RWC001 - *** Select MaxGross Weight ***
+[INFO ] 2022-11-29 22:10:08.532 [main] RWC001 - Number of Vehicles to be Amended is greater than zero Hence about to click the Amend Vehicle Radio Button
+[INFO ] 2022-11-29 22:10:08.639 [main] RWC001 - *** Click AmendVehicle RadioButton ***
+[INFO ] 2022-11-29 22:10:12.242 [main] RWC001 - IRPVEH375 : [I] Please search the VIN first to process a vehicle.
+[INFO ] 2022-11-29 22:10:12.361 [main] RWC001 - Message in Amend Vehicle ScreenIRPVEH375 : [I] Please search the VIN first to process a vehicle.
+[INFO ] 2022-11-29 22:10:12.745 [main] RWC001 - *** Enter Unit number ***
+[INFO ] 2022-11-29 22:10:16.614 [main] RWC001 - *** Enter WeightGroupNo ***
+[INFO ] 2022-11-29 22:10:21.948 [main] RWC001 - Message in Amend Vehicle Screennull
+[INFO ] 2022-11-29 22:10:22.223 [main] RWC001 - *** Enter UnladenWeight ***
+[INFO ] 2022-11-29 22:10:22.808 [main] RWC001 - *** Click TVR ***
+[INFO ] 2022-11-29 22:10:23.238 [main] RWC001 - *** Select Safety Changedd ***
+[INFO ] 2022-11-29 22:10:23.583 [main] RWC001 - *** Select HVUTForm2290 ***
+[INFO ] 2022-11-29 22:10:23.922 [main] RWC001 - *** Select LeaseContract ***
+[INFO ] 2022-11-29 22:10:24.262 [main] RWC001 - *** Select TitleDocument ***
+[INFO ] 2022-11-29 22:10:24.602 [main] RWC001 - *** Select PlateReturndoc ***
+[INFO ] 2022-11-29 22:10:24.943 [main] RWC001 - *** Select AffidavitDoc ***
+[INFO ] 2022-11-29 22:10:25.263 [main] RWC001 - *** Select PropertyTax ***
+[INFO ] 2022-11-29 22:10:26.589 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 22:10:35.898 [main] RWC001 - Message in Amend Vehicle Screen IRPVEH004 : [I] Vehicle amended successfully.
+[INFO ] 2022-11-29 22:10:36.282 [main] RWC001 - *** Enter Unit number ***
+[INFO ] 2022-11-29 22:10:40.183 [main] RWC001 - *** Enter WeightGroupNo ***
+[INFO ] 2022-11-29 22:10:45.548 [main] RWC001 - Message in Amend Vehicle Screennull
+[INFO ] 2022-11-29 22:10:45.810 [main] RWC001 - *** Enter UnladenWeight ***
+[INFO ] 2022-11-29 22:10:46.400 [main] RWC001 - *** Click TVR ***
+[INFO ] 2022-11-29 22:10:46.838 [main] RWC001 - *** Select Safety Changedd ***
+[INFO ] 2022-11-29 22:10:47.193 [main] RWC001 - *** Select HVUTForm2290 ***
+[INFO ] 2022-11-29 22:10:47.522 [main] RWC001 - *** Select LeaseContract ***
+[INFO ] 2022-11-29 22:10:47.866 [main] RWC001 - *** Select TitleDocument ***
+[INFO ] 2022-11-29 22:10:48.198 [main] RWC001 - *** Select PlateReturndoc ***
+[INFO ] 2022-11-29 22:10:48.546 [main] RWC001 - *** Select AffidavitDoc ***
+[INFO ] 2022-11-29 22:10:48.861 [main] RWC001 - *** Select PropertyTax ***
+[INFO ] 2022-11-29 22:10:50.173 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 22:10:58.898 [main] RWC001 - Message in Amend Vehicle Screen IRPVEH004 : [I] Vehicle amended successfully.
+[INFO ] 2022-11-29 22:11:01.117 [main] RWC001 - IRPVEH450 : [W] Unit(s) [636, 656] have no plate assigned. If you continue a new plate will be assigned or select 'Update from Previous Year' button or amend the vehicle and check 'Use Existing Plate' option to not issue a new plate.
+[INFO ] 2022-11-29 22:11:01.412 [main] RWC001 - IRPVEH450 : [W] Unit(s) [636, 656] have no plate assigned. If you continue a new plate will be assigned or select 'Update from Previous Year' button or amend the vehicle and check 'Use Existing Plate' option to not issue a new plate.
+[INFO ] 2022-11-29 22:11:01.592 [main] RWC001 - Number of Vehicles to be Amended is greater than zero Hence about to click the Vehicle List
+[INFO ] 2022-11-29 22:11:02.715 [main] RWC001 - *** Click VehicleList ***
+[INFO ] 2022-11-29 22:11:03.046 [main] RWC001 - Cancelling the recently Amended Vehicle636
+[INFO ] 2022-11-29 22:11:03.182 [main] RWC001 - *** Select Unit No ***
+[INFO ] 2022-11-29 22:11:04.320 [main] RWC001 - *** Search Unit No ***

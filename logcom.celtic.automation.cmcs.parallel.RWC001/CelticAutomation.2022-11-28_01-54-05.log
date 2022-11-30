@@ -1,9 +1,0 @@
-[INFO ] 2022-11-28 13:54:05.147 [main] RWC001 - Opened Browser
-[ERROR] 2022-11-28 13:54:05.153 [main] RWC001 - ok
-[INFO ] 2022-11-28 13:54:37.657 [main] RWC001 - ****************************** Login to the application  *****************************************
-[INFO ] 2022-11-28 13:54:37.657 [main] RWC001 - get full class namecom.celtic.automation.cmcs.parallel.RWC001
-[INFO ] 2022-11-28 13:54:37.657 [main] RWC001 - className isRWC001
-[INFO ] 2022-11-28 13:54:38.247 [main] RWC001 - *** Enter Username ***
-[INFO ] 2022-11-28 13:54:38.731 [main] RWC001 - *** Enter Password ***
-[INFO ] 2022-11-28 13:54:41.440 [main] RWC001 - *** Click Login ***
-[INFO ] 2022-11-28 13:54:47.186 [main] RWC001 - *** Click IRP ***

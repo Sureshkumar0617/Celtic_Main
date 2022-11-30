@@ -2,7 +2,6 @@ package com.celtic.automation.cmcs.parallel;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.celtic.automation.cmcs.factory.DriverFactory;
 import com.celtic.automation.cmcs.pages.AccountTabPage;
@@ -60,11 +59,12 @@ public class RWC001 {
 	private int readRowNo=1;
 	private int writeRowNo=2;
 	private String cancelDeletedVehicle=null;
+	
 	private String cancelAmendedVehicle=null;
-	private ElementUtil eleutil =new ElementUtil();
+	private ElementUtil eleutil;
 	private ScreenshotUtility screenshotUtil =new ScreenshotUtility();
-	private ConfigReader config=new ConfigReader();
-	private Logger log ;
+	public ConfigReader config = new ConfigReader();
+	public Logger log ;
 	private ReadExcelUtil excelutil=null;
 	private WriteExcelUtil excelutilWrite=null;
 	private ErrorCollector error = new ErrorCollector();
@@ -76,42 +76,47 @@ public class RWC001 {
 	public void user_login_as_a_internal_user() throws Exception {
 		
 		
-		String test = new Throwable().getStackTrace()[0].getClassName();
-		String path =System.getProperty("user.dir")+"\\log"+test;
-		System.setProperty("file.path.can",path);
-		log = LogManager.getLogger(test);
-		log.info("Opened Browser");
+				
+			
+		
+			/*
+			 * String test = new Throwable().getStackTrace()[0].getClassName(); String path
+			 * =System.getProperty("user.dir")+"\\log"+test;
+			 * System.setProperty("file.path.can",path); log = LogManager.getLogger(test);
+			 * ConfigReader.getLogInfo("Opened Browser");
+			 */
+		config.loggerConfigurator(new Throwable().getStackTrace()[0].getClassName());
 		config.initprop();
-		excelutil = new ReadExcelUtil(config.readRwcExcel());
-		excelutilWrite=new WriteExcelUtil();
+		excelutil = new ReadExcelUtil(config.readRwcExcel(),ConfigReader.log);
+		excelutilWrite=new WriteExcelUtil(ConfigReader.log);
+		eleutil =new ElementUtil(ConfigReader.log);
 		
 				
 		DriverFactory.getDriver().get(config.readLoginURL());
 		CommonStep.scenario.log("Launch the application using URL and login with valid credentials");
-		log.info("****************************** Login to the application  *****************************************");
-		log.info("get full class name"+this.getClass().getName());
-		log.info("className is"+className);
+		ConfigReader.getLogInfo("****************************** Login to the application  *****************************************");
 		screenshotUtil.captureScreenshot(className,"ApplicationLogin");
 		loginpage.enterUsername(config.readLoginInternalUser());
-		log.info("*** Enter Username ***");
+		ConfigReader.getLogInfo("*** Enter Username ***");
 		screenshotUtil.captureScreenshot(className,"Username");
 		loginpage.enterPassword(config.readPswrd());
-		log.info("*** Enter Password ***");
+		ConfigReader.getLogInfo("*** Enter Password ***");
 		screenshotUtil.captureScreenshot(className,"Password");
 		loginpage.clickLoginBtn();
-		log.info("*** Click Login ***");
+		ConfigReader.getLogInfo("*** Click Login ***");
 		screenshotUtil.captureScreenshot(className,"Login");
 	}
-
+		
+	
 	@When("User will navigate to the IRPLink")
 	public void user_will_navigate_to_the_irp_link() throws Exception {
 		CommonStep.scenario.log("Expand the Services header on the left column of the screen and select IRP");
 		CommonStep.scenario.log("Click on Renew fleet from Fleet card menu.");
 		dashboardpage.clickIRPLink();
-		log.info("*** Click IRP ***");
+		ConfigReader.getLogInfo("*** Click IRP ***");
 		screenshotUtil.captureScreenshot(className,"IRP");
 		dashboardpage.clickRenewFleetLink();
-		log.info("*** Click RenewFleet ***");
+		ConfigReader.getLogInfo("*** Click RenewFleet ***");
 		screenshotUtil.captureScreenshot(className,"RenewFleet");
 	}
 
@@ -120,13 +125,13 @@ public class RWC001 {
 		CommonStep.scenario.log("Enter valid search data and click to proceed");
 		
 		fleetpage.enterAccountNo(excelutil.getCellData("PreSetup","AccountNumber",readRowNo));
-		log.info("*** Enter Account Number ***");
+		ConfigReader.getLogInfo("*** Enter Account Number ***");
 		screenshotUtil.captureScreenshot(className,"Entering AccountNumber");
 		fleetpage.enterFleetNo(excelutil.getCellData("PreSetup","FleetNumber",readRowNo));
-		log.info("*** Enter FleetNo ***");
+		ConfigReader.getLogInfo("*** Enter FleetNo ***");
 		screenshotUtil.captureScreenshot(className,"Entering FleetNumber");
 		fleetpage.enterFleetyear(excelutil.getCellData("PreSetup","Fleet Expiration Year",readRowNo));
-		log.info("*** Click FleetYear ***");
+		ConfigReader.getLogInfo("*** Click FleetYear ***");
 		screenshotUtil.captureScreenshot(className,"Entering FleetYear");
 		commonobjects.clickProceed();	
 commonobjects.waitForSpinner();
@@ -135,8 +140,9 @@ commonobjects.waitForSpinner();
 	@Then("User will navigate to account section and fill the data")
 	public void user_will_navigate_to_account_section_and_fill_the_data_and_validate_message() throws Exception, Exception {
 		//Fetch Values
+		
 		CommonStep.scenario.log("Enter valid all detail in account page with comments and click on proceed button");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		excelutilWrite.setCellData(config.writeRwcExcel(),"Account",accounttabpage.fetchMCECustomernolbl(),writeRowNo,accounttabpage.fetchMCECustomerno());
 		excelutilWrite.setCellData(config.writeRwcExcel(),"Account",accounttabpage.fetchRegistrationTypelbl(), writeRowNo,accounttabpage.fetchRegistrationType());
 		excelutilWrite.setCellData(config.writeRwcExcel(),"Account",accounttabpage.fetchAccountCarrierTypeLbl(), writeRowNo,accounttabpage.fetchAccountCarrierType());
@@ -172,10 +178,10 @@ commonobjects.waitForSpinner();
 
 		
 		accounttabpage.checkEmailNotification();
-		log.info("*** Check Email Notification ***");
+		ConfigReader.getLogInfo("*** Check Email Notification ***");
 		screenshotUtil.captureScreenshot(className,"Check EmailNotification");
 		commonobjects.provideComments(excelutil.getCellData("AccountTab","Comments",readRowNo));
-		log.info("*** Enter Comments ***");
+		ConfigReader.getLogInfo("*** Enter Comments ***");
 		screenshotUtil.captureScreenshot(className,"Enter Comments in Account Section");
 
 		commonobjects.clickProceed();
@@ -275,56 +281,56 @@ commonobjects.waitForSpinner();
 		excelutilWrite.setCellData(config.writeRwcExcel(),"Fleet",fleettabpage.fleetDetailsPropertyTaxLbl(), writeRowNo,fleettabpage.fleetDetailsPropertyTax());
 
 
-		log.info(commonobjects.validateInfoMsgs());
-		log.info("Message in Fleet Screen "+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
+		ConfigReader.getLogInfo("Message in Fleet Screen "+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Fleet Screen 1");
 
 
 
 		fleettabpage.navigateToServiceProvider();
-		log.info("*** navigateToServiceProvider ***");
+		ConfigReader.getLogInfo("*** navigateToServiceProvider ***");
 		screenshotUtil.captureScreenshot(className,"Navigate to Service provider");
 
 		fleettabpage.clickPowerOfAttroney();
-		log.info("*** Click PowerofAttroney ***");
+		ConfigReader.getLogInfo("*** Click PowerofAttroney ***");
 		screenshotUtil.captureScreenshot(className,"Check Power of Attroney");
 
 		fleettabpage.enterEmailID(excelutil.getCellData("FleetTab","Email iD",readRowNo));
-		log.info("*** Entering the Emailid ***");
+		ConfigReader.getLogInfo("*** Entering the Emailid ***");
 		screenshotUtil.captureScreenshot(className,"Entering the Emailid");
 		//Expiration Date through Excel
 		//	fleettabpage.selectExpirationDate(ExcelReader.FetchDataFromSheet(config.readRWCexcel(), "FleetTab", 2, 13));
 		//Expiration Date through System
 		fleettabpage.selectExpirationDate(eleutil.getAddedDateInSpecifiedFormat("MMddYYYY",2));
-		log.info("*** Selecting the Expiration Date ***");
+		ConfigReader.getLogInfo("*** Selecting the Expiration Date ***");
 		screenshotUtil.captureScreenshot(className,"Selecting the Expiration Date");
 
 		fleettabpage.selectIRPRequirementForm(excelutil.getCellData("FleetTab","IRP Requirements Form",readRowNo));
-		log.info("*** Selecting the IRPRequirementForm ***");
+		ConfigReader.getLogInfo("*** Selecting the IRPRequirementForm ***");
 		screenshotUtil.captureScreenshot(className,"Selecting the IRPRequirementForm");
 
 		fleettabpage.selectStatementofUnderstanding(excelutil.getCellData("FleetTab","Statement of Understanding",readRowNo));		
-		log.info("*** Selecting StatementofUnderstanding ***");
+		ConfigReader.getLogInfo("*** Selecting StatementofUnderstanding ***");
 		screenshotUtil.captureScreenshot(className,"Selecting StatementofUnderstanding");
 
 		fleettabpage.selectInstallmentAgreement(excelutil.getCellData("FleetTab","Installment Agreement",readRowNo));
-		log.info("*** Selecting InstallmentAgreement ***");
+		ConfigReader.getLogInfo("*** Selecting InstallmentAgreement ***");
 		screenshotUtil.captureScreenshot(className,"Selecting InstallmentAgreement");
 
 		fleettabpage.selectPowerOfAttroney(excelutil.getCellData("FleetTab","Power of Attorney",readRowNo));
-		log.info("*** Selecting PowerOfAttroney ***");
+		ConfigReader.getLogInfo("*** Selecting PowerOfAttroney ***");
 		screenshotUtil.captureScreenshot(className,"Selecting PowerOfAttroney");
 
 		fleettabpage.selectHVUTForm(excelutil.getCellData("FleetTab","HVUT - Form 2290",readRowNo));
-		log.info("*** Selecting HVUTForm ***");
+		ConfigReader.getLogInfo("*** Selecting HVUTForm ***");
 		screenshotUtil.captureScreenshot(className,"Selecting HVUTForm");		
 
 		fleettabpage.selectPropertyTax(excelutil.getCellData("FleetTab","Property Tax",readRowNo));
-		log.info("*** Selecting PropertyTax ***");
+		ConfigReader.getLogInfo("*** Selecting PropertyTax ***");
 		screenshotUtil.captureScreenshot(className,"Selecting PropertyTax");		
 
 		commonobjects.provideComments(excelutil.getCellData("FleetTab","Comments",readRowNo));
-		log.info("*** Enter Comments ***");
+		ConfigReader.getLogInfo("*** Enter Comments ***");
 		screenshotUtil.captureScreenshot(className,"Enter Comments in Fleet Section");
 
 		commonobjects.clickProceed();
@@ -374,8 +380,8 @@ commonobjects.waitForSpinner();
 		}
 		CommonStep.scenario.log("Message in Distance Screen"+ actualmessage);
 
-		log.info(commonobjects.validateInfoMsgs());
-		log.info("Message in Distance Screen"+commonobjects.fetchErrorMessage(expSucces1));
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
+		ConfigReader.getLogInfo("Message in Distance Screen"+commonobjects.fetchErrorMessage(expSucces1));
 
 		screenshotUtil.captureScreenshot(className,"Message in Distance Screen 1");
 
@@ -388,18 +394,18 @@ commonobjects.waitForSpinner();
 		}
 		CommonStep.scenario.log("Message in Distance Screen"+ actualmessage2);
 
-		log.info("Message in Distance Screen"+commonobjects.fetchErrorMessage(expSucces1));
+		ConfigReader.getLogInfo("Message in Distance Screen"+commonobjects.fetchErrorMessage(expSucces1));
 
 		screenshotUtil.captureScreenshot(className,"Message in Distance Screen 1");
 
 	/*	distancetabpage.enterAllDistanceValue(excelutil.getCellData("DistanceTab","Distance",readRowNo));   	
 		//distancetabpage.enterMODistanceValue(excelutil.getCellData("DistanceTab","Juri",RowNo), excelutil.getCellData("DistanceTab","Distance",RowNo));
-		log.info("*** Enter MODistanceValue ***");
+		ConfigReader.getLogInfo("*** Enter MODistanceValue ***");
 		screenshotUtil.captureScreenshot(className,"Enter MODistanceValue");
 		*/
 		distancetabpage.selectYesOrNo(excelutil.getCellData("DistanceTab","Actual Distance Reporting Period",readRowNo));
 		commonobjects.provideComments(excelutil.getCellData("DistanceTab","Comments",readRowNo));
-		log.info("*** Enter Comments ***");
+		ConfigReader.getLogInfo("*** Enter Comments ***");
 		screenshotUtil.captureScreenshot(className,"Enter Comments in Distance Section");
 
 		commonobjects.clickProceed();
@@ -426,14 +432,14 @@ commonobjects.waitForSpinner();
 					k++;
 				}
 				excelutilWrite.setCellData(config.writeRwcExcel(),"WeightGroup",headervalues.get(j)+k, writeRowNo,RowDatavalues.get(i));
-				log.info("Weight Group headervalues"+headervalues.get(j));
-				log.info("Weight Group RowDatavalues"+RowDatavalues.get(i));
+				ConfigReader.getLogInfo("Weight Group headervalues"+headervalues.get(j));
+				ConfigReader.getLogInfo("Weight Group RowDatavalues"+RowDatavalues.get(i));
 			}
 			else if(i>0 && i<5){
 			
 				excelutilWrite.setCellData(config.writeRwcExcel(),"WeightGroup",headervalues.get(i)+k, writeRowNo,RowDatavalues.get(i)); 
-				log.info("Weight Group headervalues"+headervalues.get(i));
-				log.info("Weight Group RowDatavalues"+RowDatavalues.get(i));
+				ConfigReader.getLogInfo("Weight Group headervalues"+headervalues.get(i));
+				ConfigReader.getLogInfo("Weight Group RowDatavalues"+RowDatavalues.get(i));
 			}
 
 		}
@@ -449,8 +455,8 @@ commonobjects.waitForSpinner();
 		CommonStep.scenario.log("Message in Weight Group Screen"+actualmessage);
 
 
-		log.info(commonobjects.validateInfoMsgs());
-		log.info("Message in Weight Group Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
+		ConfigReader.getLogInfo("Message in Weight Group Screen"+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Weight Group Screen 1");
 
 		//Add Weight Group Screen
@@ -459,18 +465,18 @@ commonobjects.waitForSpinner();
 		for(int weightcount=0;weightcount<Integer.valueOf(WeightGroupCount_Excel);weightcount++) {
 			if(weightcount<Integer.valueOf(WeightGroupCount_Excel)) {
 				wgtgroup.clickAddWeightGroup();
-				log.info("*** Click AddweightGroup ***");
+				ConfigReader.getLogInfo("*** Click AddweightGroup ***");
 				screenshotUtil.captureScreenshot(className,"Click AddweightGroup");
 			}
 			wgtgroupadd.selectWeightGroupType(excelutil.getCellData("WeightGrouptab","WeightGroup Type"+String.valueOf(weightcount),readRowNo));
 
-			log.info("*** Select WeightGroupType ***");
+			ConfigReader.getLogInfo("*** Select WeightGroupType ***");
 			screenshotUtil.captureScreenshot(className,"Select WeightGroupType");
 			wgtgroupadd.enterWeightGroupNo(excelutil.getCellData("WeightGrouptab","Weight Group No."+String.valueOf(weightcount),readRowNo));
-			log.info("*** Enter WeightGroup No ***");
+			ConfigReader.getLogInfo("*** Enter WeightGroup No ***");
 			screenshotUtil.captureScreenshot(className,"Enter WeightGroup No");
 			wgtgroupadd.selectMaxGrossWeight(excelutil.getCellData("WeightGrouptab","Max Gross Weight"+String.valueOf(weightcount),readRowNo));
-			log.info("*** Select MaxGross Weight ***");
+			ConfigReader.getLogInfo("*** Select MaxGross Weight ***");
 			screenshotUtil.captureScreenshot(className,"Select MaxGross Weight");
 			commonobjects.clickProceed();
 			commonobjects.waitForSpinner();
@@ -491,11 +497,11 @@ commonobjects.waitForSpinner();
 		}
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		//ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		// Weight Group Verification Screen
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-//		log.info(commonobjects.validateInfoMsgs());
+//		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs());
 		//Validating JUR WITH DIFFERENT WEIGHTS
 		String[] weightlist=wgtgroup.validateJurisWeightsedited(); //[AL, AR, AZ]
 		for(int i=0;i<Integer.valueOf(juriExcelCount);i++) {
@@ -520,18 +526,17 @@ commonobjects.waitForSpinner();
 		excelutilWrite.setCellData(config.writeRwcExcel(),"VehicleTab",Vehicletabpage.fetchDeleteVehicleLbl(), writeRowNo,Vehicletabpage.fetchDeleteVehicle());
 		excelutilWrite.setCellData(config.writeRwcExcel(),"VehicleTab",Vehicletabpage.fetchRenewVehicleLbl(), writeRowNo,Vehicletabpage.fetchRenewVehicle());
 
-		log.info(commonobjects.validateInfoMsgs());
 
 		int NoofVehiclestoAmend=Integer.valueOf(excelutil.getCellData("VehicleTab","NoofVehiclestoAmend",readRowNo));
 		if(NoofVehiclestoAmend>0) {
-			log.info("Number of Vehicles to be Amended is greater than zero Hence about to click the Amend Vehicle Radio Button");
+			ConfigReader.getLogInfo("Number of Vehicles to be Amended is greater than zero Hence about to click the Amend Vehicle Radio Button");
 			Vehicletabpage.clickAmendVehicleRadioButton();
-			log.info("*** Click AmendVehicle RadioButton ***");
+			ConfigReader.getLogInfo("*** Click AmendVehicle RadioButton ***");
 			screenshotUtil.captureScreenshot(className,"Click AmendVehicle RadioButton");
 
 			commonobjects.clickProceed();
 			commonobjects.waitForSpinner();
-			log.info(commonobjects.validateInfoMsgs());
+			ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 			String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 			try {
@@ -542,19 +547,19 @@ commonobjects.waitForSpinner();
 			}
 			CommonStep.scenario.log("Message in Amend Vehicle Screen"+actualmessage);
 
-			log.info("Message in Amend Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces));
+			ConfigReader.getLogInfo("Message in Amend Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces));
 			screenshotUtil.captureScreenshot(className,"Message in Amend Vehicle Screen 1");
 
 
 			for(int i=0;i<NoofVehiclestoAmend;i++) {
 				if(NoofVehiclestoAmend>Integer.valueOf(config.readAmendVehicleCondition())) {
 					vehicleAmend.selectUnitNoFromSuggestions();
-					log.info("*** Select Unit number ***");
+					ConfigReader.getLogInfo("*** Select Unit number ***");
 					screenshotUtil.captureScreenshot(className,"Select Unit number");
 				}
 				else {
 					vehicleAmend.enterUnitNo(excelutil.getCellData("VehicleAmendTab","Unit"+String.valueOf(i),readRowNo));
-					log.info("*** Enter Unit number ***");
+					ConfigReader.getLogInfo("*** Enter Unit number ***");
 					screenshotUtil.captureScreenshot(className,"Enter Unit number");
 				}
 				vehicleAmend.clickSearch();
@@ -566,7 +571,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 				 vehicleBodyType.equalsIgnoreCase("WR - Wrecker")) {
 					vehicleAmend.selectWeightGroupNo(excelutil.getCellData("WeightGrouptab","Vehicle_WeightGroupNo",readRowNo));
 
-					log.info("*** Enter WeightGroupNo ***");
+					ConfigReader.getLogInfo("*** Enter WeightGroupNo ***");
 					screenshotUtil.captureScreenshot(className,"Enter WeightGroupNo");
 					String actualmessage1 = commonobjects.fetchErrorMessage(expSucces2);
 					try {
@@ -577,49 +582,49 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 					}
 					CommonStep.scenario.log("Message in Amend Vehicle Screen"+actualmessage1);
 
-					log.info("Message in Amend Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces2));
+					ConfigReader.getLogInfo("Message in Amend Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces2));
 					screenshotUtil.captureScreenshot(className,"Message in Amend Vehicle Screen 2");
 				}
 				vehicleAmend.enterUnladenWeight(excelutil.getCellData("VehicleTab","unladenWeight",readRowNo));
-				log.info("*** Enter UnladenWeight ***");
+				ConfigReader.getLogInfo("*** Enter UnladenWeight ***");
 				screenshotUtil.captureScreenshot(className,"Enter UnladenWeight");
 
 
 				vehicleAmend.clickTVR();
-				log.info("*** Click TVR ***");
+				ConfigReader.getLogInfo("*** Click TVR ***");
 				screenshotUtil.captureScreenshot(className,"Click TVR");
 
 				vehicleAmend.selectSafetyChangedd(excelutil.getCellData("VehicleTab","Safety Change",readRowNo));
-				log.info("*** Select Safety Changedd ***");
+				ConfigReader.getLogInfo("*** Select Safety Changedd ***");
 				screenshotUtil.captureScreenshot(className,"Select Safety Changedd");
 
 				vehicleAmend.selectHVUTForm2290(excelutil.getCellData("VehicleTab","HVUT - Form",readRowNo));
-				log.info("*** Select HVUTForm2290 ***");
+				ConfigReader.getLogInfo("*** Select HVUTForm2290 ***");
 				screenshotUtil.captureScreenshot(className,"Select HVUTForm2290");
 
 				vehicleAmend.selectLeaseContract(excelutil.getCellData("VehicleTab","Lease Contract",readRowNo));
-				log.info("*** Select LeaseContract ***");
+				ConfigReader.getLogInfo("*** Select LeaseContract ***");
 				screenshotUtil.captureScreenshot(className,"Select LeaseContract");
 
 				vehicleAmend.selectTitleDocument(excelutil.getCellData("VehicleTab","Title Document",readRowNo));
-				log.info("*** Select TitleDocument ***");
+				ConfigReader.getLogInfo("*** Select TitleDocument ***");
 				screenshotUtil.captureScreenshot(className,"Select TitleDocument");
 
 				vehicleAmend.selectPlateReturndoc(excelutil.getCellData("VehicleTab","Plate Returned Document",readRowNo));
-				log.info("*** Select PlateReturndoc ***");
+				ConfigReader.getLogInfo("*** Select PlateReturndoc ***");
 				screenshotUtil.captureScreenshot(className,"Select PlateReturndoc");
 
 				vehicleAmend.selectAffidavitDoc(excelutil.getCellData("VehicleTab","Affidavit document",readRowNo));
-				log.info("*** Select AffidavitDoc ***");
+				ConfigReader.getLogInfo("*** Select AffidavitDoc ***");
 				screenshotUtil.captureScreenshot(className,"Select AffidavitDoc");
 
 				vehicleAmend.selectPropertyTax(excelutil.getCellData("VehicleTab","Property Tax",readRowNo));
-				log.info("*** Select PropertyTax ***");
+				ConfigReader.getLogInfo("*** Select PropertyTax ***");
 				screenshotUtil.captureScreenshot(className,"Select PropertyTax");
 
 				commonobjects.provideComments(excelutil.getCellData("VehicleTab","Ammend_Comments",readRowNo));
 
-				log.info("*** Enter Comments ***");
+				ConfigReader.getLogInfo("*** Enter Comments ***");
 				screenshotUtil.captureScreenshot(className,"Enter Comments in Distance Section");
 
 				commonobjects.clickProceed();
@@ -637,13 +642,13 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 				CommonStep.scenario.log("Message in Amend Vehicle Screen "+actualmessage2);
 
 
-				log.info("Message in Amend Vehicle Screen "+commonobjects.fetchErrorMessage(expSucces3));
+				ConfigReader.getLogInfo("Message in Amend Vehicle Screen "+commonobjects.fetchErrorMessage(expSucces3));
 				screenshotUtil.captureScreenshot(className,"Message in Amend Vehicle Screen");
 
 			}// End of for Loop
 			commonobjects.clickDoneBtn();
 			commonobjects.waitForSpinner();
-			log.info(commonobjects.validateInfoMsgs());
+			ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		} //End of vehicle ammend if loop
 	}
 
@@ -651,17 +656,17 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 	@Then("User will Delete vehicle as per the requiremnet and validate the message {string}")
 	public void user_will_delete_vehicle_as_per_the_requiremnet_and_validate_the_message(String expSucces) throws Exception {
 		CommonStep.scenario.log("Completed Delete Vehicle ");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		int NoofVehiclestoDelete=Integer.valueOf(excelutil.getCellData("VehicleTab","NoOfVehiclesToDelete",readRowNo));	
 		if(NoofVehiclestoDelete>0) {
-			log.info("Number of Vehicles to be deleted is greater than zero Hence about to click the Delete Vehicle Radio Button");
+			ConfigReader.getLogInfo("Number of Vehicles to be deleted is greater than zero Hence about to click the Delete Vehicle Radio Button");
 			Vehicletabpage.clickDeleteVehicleRadioButton();
-			log.info("**** Click DeleteVehicle ****");
+			ConfigReader.getLogInfo("**** Click DeleteVehicle ****");
 			screenshotUtil.captureScreenshot(className,"Click Delete Vehicle");
 
 			commonobjects.clickProceed();
 			commonobjects.waitForSpinner();
-			log.info(commonobjects.validateInfoMsgs());
+			ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 			//below lines of code for deleting the vehicles from suggestion box
 			String Vehiclescount=excelutil.getCellData("VehicleTab","NoOfVehiclesToDelete",readRowNo);
 			String PlateStatus=excelutil.getCellData("VehicleTab","Delete_PlateStatus",readRowNo);
@@ -681,27 +686,27 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 				for(int j=0;j<NoofVehiclestoDelete;j++) {
 					//Enter unit # to filter & delete
 					vehicleDelete.enterUnitNo(excelutil.getCellData("VehicleDeleteTab","Unit"+String.valueOf(j),readRowNo));
-					log.info("*** Delete vehicle Enter Unit number ***");
+					ConfigReader.getLogInfo("*** Delete vehicle Enter Unit number ***");
 					screenshotUtil.captureScreenshot(className,"Delete vehicle Enter Unit number");
 
 					vehicleDelete.clickonSearch();
 					vehicleDelete.ClickCheckBoxFromGrid();
 
 					vehicleDelete.selectPlateStatus(PlateStatus);
-					log.info("***DeleteVehicle Select PlateStatus ***");
+					ConfigReader.getLogInfo("***DeleteVehicle Select PlateStatus ***");
 					screenshotUtil.captureScreenshot(className,"DeleteVehicle Select PlateStatus");
 
 					vehicleDelete.selectPlateReturnedDocument(PlateReturnedDocument);
-					log.info("***DeleteVehicle Select PlateReturndoc ***");
+					ConfigReader.getLogInfo("***DeleteVehicle Select PlateReturndoc ***");
 					screenshotUtil.captureScreenshot(className,"DeleteVehicle Select PlateReturndoc");
 
 					vehicleDelete.selectAffidavitDocument(AffidavitDocument);
-					log.info("***DeleteVehicle Select AffidavitDoc ***");
+					ConfigReader.getLogInfo("***DeleteVehicle Select AffidavitDoc ***");
 					screenshotUtil.captureScreenshot(className,"DeleteVehicle Select AffidavitDoc");
 
 
 					vehicleDelete.entercomments(Comments);
-					log.info("*** DeleteVehicle Comment ***");
+					ConfigReader.getLogInfo("*** DeleteVehicle Comment ***");
 					screenshotUtil.captureScreenshot(className,"DeleteVehicle Comment");
 
 					commonobjects.clickProceed();
@@ -719,12 +724,12 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			}
 			CommonStep.scenario.log("Message in Delete Vehicle Screen"+actualmessage);
 
-			log.info(commonobjects.validateInfoMsgs());
-			log.info("Message in Delete Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces));
+			ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
+			ConfigReader.getLogInfo("Message in Delete Vehicle Screen"+commonobjects.fetchErrorMessage(expSucces));
 			screenshotUtil.captureScreenshot(className,"Message in Delete Vehicle Screen 1");
 			commonobjects.clickDoneBtn();
 			commonobjects.waitForSpinner();
-			log.info(commonobjects.validateInfoMsgs());
+			ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		}//End of vehicle Delete if loop
 	}
 	@Then("User will navigate to vehicle list to cancel the existing amended vehicle and amend it again {string}")
@@ -734,13 +739,13 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		int NoofVehiclestoAmend=Integer.valueOf(excelutil.getCellData("VehicleTab","NoofVehiclestoAmend",readRowNo));
 		if(NoofVehiclestoAmend>0) {
 			CommonStep.scenario.log("Go to Vehicle List and update Amended  Vehicle details");
-			log.info("Number of Vehicles to be Amended is greater than zero Hence about to click the Vehicle List");
+			ConfigReader.getLogInfo("Number of Vehicles to be Amended is greater than zero Hence about to click the Vehicle List");
 		Vehicletabpage.clickVehicleList();
-		log.info("*** Click VehicleList ***");
+		ConfigReader.getLogInfo("*** Click VehicleList ***");
 		screenshotUtil.captureScreenshot(className,"Click VehicleList");
 	
 		cancelAmendedVehicle=vehiclelist.fetchRequiredUnitNumber("AMEND");
-		log.info("Cancelling the recently Amended Vehicle"+cancelAmendedVehicle);
+		ConfigReader.getLogInfo("Cancelling the recently Amended Vehicle"+cancelAmendedVehicle);
 		
 		if(NoofVehiclestoAmend>Integer.valueOf(config.readAmendVehicleCondition())) {
 			//Canceling the Amended Vehicle
@@ -750,11 +755,12 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		else {
 			vehicleadd.enterUnitNumber(excelutil.getCellData("VehicleAmendTab","Unit3",readRowNo));
 		}
-		log.info("*** Select Unit No ***");
+		ConfigReader.getLogInfo("*** Select Unit No ***");
 		screenshotUtil.captureScreenshot(className,"Select Unit No");
 
 		vehicleAmend.clickSearch();
-		log.info("*** Search Unit No ***");
+		ConfigReader.getLogInfo("*** Search Unit No ***");
+	Thread.sleep(2000);	
 		vehicleadd.selectFirstHandIcon();
 		vehicleadd.selectWeightGroupNumber(excelutil.getCellData("VehicleUpdate","WeightGroup Number",readRowNo));
 		vehicleadd.selectColor(excelutil.getCellData("VehicleTab","Vehicle_Color",readRowNo));
@@ -788,30 +794,30 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			int NoofVehiclestoDelete=Integer.valueOf(excelutil.getCellData("VehicleTab","NoOfVehiclesToDelete",readRowNo));
 			if(NoofVehiclestoDelete>0) {
 				CommonStep.scenario.log("Go to Vehicle List and update/cancel  Deleted Vehicle details");
-				log.info("Number of Vehicles to be deleted is greater than zero Hence about to click the Vehicle List");
+				ConfigReader.getLogInfo("Number of Vehicles to be deleted is greater than zero Hence about to click the Vehicle List");
 			Vehicletabpage.clickVehicleList();
-				log.info("*** Click VehicleList ***");
+				ConfigReader.getLogInfo("*** Click VehicleList ***");
 				screenshotUtil.captureScreenshot(className,"Click VehicleList");
 			
 				cancelDeletedVehicle=vehiclelist.fetchRequiredUnitNumber("DELETE");
 				if(NoofVehiclestoDelete>Integer.valueOf(config.readDeleteVehicleCondition())) {
-					log.info("Cancelling the recently Deleted Vehicle"+cancelDeletedVehicle);
+					ConfigReader.getLogInfo("Cancelling the recently Deleted Vehicle"+cancelDeletedVehicle);
 					vehicleadd.enterUnitNumber(cancelDeletedVehicle);
 				}
 				else {
 					vehicleadd.enterUnitNumber(excelutil.getCellData("VehicleDeleteTab","Unit0",readRowNo));	
 				}
-				log.info("*** Select Unit No ***");
+				ConfigReader.getLogInfo("*** Select Unit No ***");
 				screenshotUtil.captureScreenshot(className,"Select Unit No");
 
 				vehicleAmend.clickSearch();
-				log.info("*** Search Unit No ***");
+				ConfigReader.getLogInfo("*** Search Unit No ***");
 				screenshotUtil.captureScreenshot(className,"Search Unit No");
 				//	}
 				vehicleadd.selectFirstHandIcon();
 				commonobjects.ClickConfirmCancel();
 				eleutil.handleAlert();
-				log.info(commonobjects.validateInfoMsgs());
+				ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 				String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 				try {
@@ -824,50 +830,50 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 				CommonStep.scenario.log("Message in Vehicle Cancel Screen"+ actualmessage);
 
 
-				log.info("Message in Vehicle Cancel Screen"+commonobjects.fetchErrorMessage(expSucces)); 
+				ConfigReader.getLogInfo("Message in Vehicle Cancel Screen"+commonobjects.fetchErrorMessage(expSucces)); 
 				screenshotUtil.captureScreenshot(className,"Message in Vehicle Cancel Screen 1");
 
 				commonobjects.clickBack();
-				log.info(commonobjects.validateInfoMsgs());
+				ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 		//Delete the recently cancelled vehicle
 		Vehicletabpage.clickDeleteVehicleRadioButton();
-		log.info("**** Click DeleteVehicle ****");
+		ConfigReader.getLogInfo("**** Click DeleteVehicle ****");
 		screenshotUtil.captureScreenshot(className,"Click Delete Vehicle");
 
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		//below lines of code for deleting the vehicles from suggestion box
 		String plateStatus=excelutil.getCellData("VehicleTab","Delete_PlateStatus",readRowNo);
 		String plateReturnedDocument=excelutil.getCellData("VehicleTab","Delete_PlateReturnedDocument",readRowNo);
 		String affidavitDocument=excelutil.getCellData("VehicleTab","Delete_AffidavitDocument",readRowNo);
 		String Comments=excelutil.getCellData("VehicleTab","Delete_Comments",readRowNo);
-		log.info("Deleting the recently Cancelled Vehicle"+cancelDeletedVehicle);
+		ConfigReader.getLogInfo("Deleting the recently Cancelled Vehicle"+cancelDeletedVehicle);
 		vehicleDelete.enterUnitNo(cancelDeletedVehicle);
 
 		//vehicleDelete.enterUnitNo(excelutil.getCellData("VehicleDeleteTab","Unit0",RowNo));
-		log.info("*** Delete vehicle Enter Unit number ***");
+		ConfigReader.getLogInfo("*** Delete vehicle Enter Unit number ***");
 		screenshotUtil.captureScreenshot(className,"Delete vehicle Enter Unit number");
 
 		vehicleDelete.clickonSearch();
 		vehicleDelete.ClickCheckBoxFromGrid();
 
 		vehicleDelete.selectPlateStatus(plateStatus);
-		log.info("***DeleteVehicle Select PlateStatus ***");
+		ConfigReader.getLogInfo("***DeleteVehicle Select PlateStatus ***");
 		screenshotUtil.captureScreenshot(className,"DeleteVehicle Select PlateStatus");
 
 		vehicleDelete.selectPlateReturnedDocument(plateReturnedDocument);
-		log.info("***DeleteVehicle Select PlateReturndoc ***");
+		ConfigReader.getLogInfo("***DeleteVehicle Select PlateReturndoc ***");
 		screenshotUtil.captureScreenshot(className,"DeleteVehicle Select PlateReturndoc");
 
 		vehicleDelete.selectAffidavitDocument(affidavitDocument);
-		log.info("***DeleteVehicle Select AffidavitDoc ***");
+		ConfigReader.getLogInfo("***DeleteVehicle Select AffidavitDoc ***");
 		screenshotUtil.captureScreenshot(className,"DeleteVehicle Select AffidavitDoc");
 
 
 		vehicleDelete.entercomments(Comments);
-		log.info("*** DeleteVehicle Comment ***");
+		ConfigReader.getLogInfo("*** DeleteVehicle Comment ***");
 		screenshotUtil.captureScreenshot(className,"DeleteVehicle Comment");
 
 		commonobjects.clickProceed();
@@ -887,7 +893,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 	public void user_will_navigate_to_billing_to_verify_as_well_to_adjust_the_cost_waive_fees(String expSucces) throws Exception {
 	
 		if(eleutil.getTitle().trim().equalsIgnoreCase("Vehicle Renewal Entry - IRP")) {
-			log.info("Screen is in Vehicle Renewal Entry Screen");
+			ConfigReader.getLogInfo("Screen is in Vehicle Renewal Entry Screen");
 			commonobjects.clickDoneBtn();
 			commonobjects.waitForSpinner();
 		}
@@ -921,22 +927,22 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			excelutilWrite.setCellData(config.writeRwcExcel(),"BillingGrid",billingtab.fetchBillingGridFeeAmount()+i,writeRowNo,TableFeeAmount.get(i));
 		}	
 
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 		billingtab.clickTVR();
-		log.info("*** Click TVR ***");
+		ConfigReader.getLogInfo("*** Click TVR ***");
 		screenshotUtil.captureScreenshot(className,"Click TVR");
 		
 		excelutilWrite.setCellData(config.writeRwcExcel(),"Billing",billingtab.fetchBillingTVRNoOfDayslbl(),writeRowNo,billingtab.fetchBilling_TVRNoOfDays());
 		 installmentPlanCheckStatus=billingtab.fetchBilling_InstallmentPlan();
 		 CommonStep.scenario.log("Check Installment Payment checkbox");
-		 log.info("*** Installment Plan Check Box Status ***"+installmentPlanCheckStatus); //Before clciking should returns false
+		 ConfigReader.getLogInfo("*** Installment Plan Check Box Status ***"+installmentPlanCheckStatus); //Before clciking should returns false
 		 billingtab.clickInstallmentPlan();
-		log.info("*** Click Installement Plan ***");
+		ConfigReader.getLogInfo("*** Click Installement Plan ***");
 		screenshotUtil.captureScreenshot(className,"Click Installement Plan");
 
 		billingtab.selectElectronicDeliveryType(excelutil.getCellData("BillingTab","Electronic Delivery Type",readRowNo));
-		log.info("*** Select Electronic DeliveryType ***");
+		ConfigReader.getLogInfo("*** Select Electronic DeliveryType ***");
 		screenshotUtil.captureScreenshot(className,"Select Electronic DeliveryType");
 
 		commonobjects.provideComments(excelutil.getCellData("BillingTab","Billing_Comments",readRowNo));
@@ -944,14 +950,14 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		commonobjects.waitForSpinner();
 //check the Installment Plan is checked or not
 		 installmentPlanCheckStatus=billingtab.fetchBilling_InstallmentPlan();
-		log.info("*** Installment Plan Check Box Status ***"+installmentPlanCheckStatus); //After clicking should returns true
+		ConfigReader.getLogInfo("*** Installment Plan Check Box Status ***"+installmentPlanCheckStatus); //After clicking should returns true
 		CommonStep.scenario.log("Manually Adjust & Waive Fees with comments & set Delivery Types as PDF");
 		billingtab.enterManualAdjBaseJur(excelutil.getCellData("BillingTab","Manual Adj. Base Jur.",readRowNo));
-		log.info("*** Enter ManualAdjBaseJur ***");
+		ConfigReader.getLogInfo("*** Enter ManualAdjBaseJur ***");
 		screenshotUtil.captureScreenshot(className,"Enter ManualAdjBaseJur");
 
 		billingtab.clickReCalculate();
-		log.info("*** Click Recalculate ***");
+		ConfigReader.getLogInfo("*** Click Recalculate ***");
 		screenshotUtil.captureScreenshot(className,"Click Recalculate");
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
@@ -962,49 +968,49 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Biling Screen"+ actualmessage);
 
-		log.info("Message in Biling Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Biling Screen"+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Biling Screen 1");
 
 		billingtab.expandManualAdjReason();
 		billingtab.enterManualAdjReasonComments(excelutil.getCellData("BillingTab","ManualReason",readRowNo));
-		log.info("*** Enter ManualAdjReason Comments ***");
+		ConfigReader.getLogInfo("*** Enter ManualAdjReason Comments ***");
 		screenshotUtil.captureScreenshot(className,"Enter ManualAdjReason Comments");
 		billingtab.clickManualAdjReasonDeleteAllowed();
 		billingtab.clickManualAdjReasonAddorUpdateComments();
 		CommonStep.scenario.log("Click on proceed button");
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		//Check whether Late Filing Penalty,Late Pay Penalty are greater than zero
 		//Bicentennial Fee,Grade Crossing Fee,Replacement Plate Fee,Second Plate Fee,Late Filing Penalty,Late Pay Penalty,Transfer Fee,Transfer Revenue Fee,Wire Transfer Fee
 		//S - System Error,M - MCE Agent Error,D - Natural Disaster,O - Other
 		boolean LateFilingPenaltyAmount=billingtab.getAmount(excelutil.getCellData("BillingTab","Late Filing Penalty",readRowNo));
-		log.info("Late Filing Penalty Amount is Greater than zero - "+LateFilingPenaltyAmount);
+		ConfigReader.getLogInfo("Late Filing Penalty Amount is Greater than zero - "+LateFilingPenaltyAmount);
 		boolean LatePayPenaltyAmount=billingtab.getAmount(excelutil.getCellData("BillingTab","Late Pay Penaltys",readRowNo));
-		log.info("Late pay Penalty Amount is Greater than zero - "+LatePayPenaltyAmount);
+		ConfigReader.getLogInfo("Late pay Penalty Amount is Greater than zero - "+LatePayPenaltyAmount);
 		if(LateFilingPenaltyAmount==true &&LatePayPenaltyAmount==true) {
 			String FeeDescriptiontoWaiveOff=excelutil.getCellData("BillingTab","Grade Crossing Fee",readRowNo);
 			String FeeWaiveOffReason=excelutil.getCellData("BillingTab","Grade Crossing Fee Waive Off",readRowNo);
 			billingtab.selectWaiveOff(FeeDescriptiontoWaiveOff,FeeWaiveOffReason);
-			log.info("*** Waived off for "+FeeDescriptiontoWaiveOff +"  "+" with Reason "+ FeeWaiveOffReason + " ***");
+			ConfigReader.getLogInfo("*** Waived off for "+FeeDescriptiontoWaiveOff +"  "+" with Reason "+ FeeWaiveOffReason + " ***");
 			screenshotUtil.captureScreenshot(className,"Waived off Fee");
 		}
 		billingtab.clickReCalculate();
-		log.info("*** Click Recalculate ***");
+		ConfigReader.getLogInfo("*** Click Recalculate ***");
 		screenshotUtil.captureScreenshot(className,"Click Recalculate");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		billingtab.expandFeeOverrideReason();
 
 		billingtab.enterFeeOverrideReasonComments(excelutil.getCellData("BillingTab","FeeOverrideReasonComments",readRowNo));
 
-		log.info("*** Enter FeeOverrideReason Comments ***");
+		ConfigReader.getLogInfo("*** Enter FeeOverrideReason Comments ***");
 		screenshotUtil.captureScreenshot(className,"Enter FeeOverrideReason Comments");
 
 		billingtab.clickFeeOverrideReasonDeleteAllowed();
 		billingtab.clickFeeOverrideReasonAddorUpdateComments();
-
+Thread.sleep(2000);
 		billingtab.clickReCalculate();
-		log.info(commonobjects.validateInfoMsgs());
+		//ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 		String mainwidow=eleutil.GetParentWindow();
 		commonobjects.clickProceed();
@@ -1013,7 +1019,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		String childWindow=eleutil.SwitchtoFirstChildWindow();
 		eleutil.saveAsFile();
 		String fileLocation=System.getProperty("user.dir")+"\\"+config.readDownloadFolder()+className+"\\";
-		log.info("fileLocation"+fileLocation);
+		ConfigReader.getLogInfo("fileLocation"+fileLocation);
 		String DesiredPath=eleutil.checkFileExistence(fileLocation,"Billing","pdf");
 		eleutil.sleepTime(4000); //to wait for the PDF Load completely
 		eleutil.uploadFile(DesiredPath);
@@ -1043,7 +1049,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			excelutilWrite.setCellData(config.writeRwcExcel(),"PaymentTab",paymenttab.FetchHeaderFeeAmount()+i,writeRowNo,Payment_TableFeeAmount.get(i));
 		}
 
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
 			Assert.assertEquals(actualmessage, expSucces);
@@ -1053,7 +1059,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Payment Screen"+ expSucces);
 
-		log.info("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Payment Screen 1");
 
 
@@ -1067,7 +1073,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 
 		CommonStep.scenario.log("Message in Payment Screen"+ expSucces2);
 
-		log.info("Message in Payment Screen"+ commonobjects.fetchErrorMessage(expSucces2));
+		ConfigReader.getLogInfo("Message in Payment Screen"+ commonobjects.fetchErrorMessage(expSucces2));
 		screenshotUtil.captureScreenshot(className,"Message in Payment Screen 2");
 		String actualmessage3 = commonobjects.fetchErrorMessage(expSucces3);
 		try {
@@ -1078,33 +1084,33 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Payment Screen"+ expSucces3);
 
-		log.info("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces3));
+		ConfigReader.getLogInfo("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces3));
 		screenshotUtil.captureScreenshot(className,"Message in Payment Screen 3");
 		pay.selectElectronicDeliverytype(excelutil.getCellData("Payment","ElectronicDeliveryType",readRowNo));
-		log.info("***Select Delivery type***");
+		ConfigReader.getLogInfo("***Select Delivery type***");
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		//ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 
 		//Navigates to Payment Verification Screen
 		CommonStep.scenario.log("Verify the page & Click Add to Cart button");
 		paymenttab.clickAddtoCart();
-		log.info("***Click Add to Cart**");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo("***Click Add to Cart**");
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		commonobjects.validateInfoMsgs();
 	}
 
 	@Then("User will navigate to supplement continuance and validate the meesage {string}")
 	public void user_will_navigate_to_supplement_continuance_and_validate_the_meesage(String expSucces) throws Exception, Exception {
 		CommonStep.scenario.log("Go to Supplment Continuance & try to continue above record");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		paymenttab.clicksupplcont();
-		log.info("***Click Supplement continue***");
+		ConfigReader.getLogInfo("***Click Supplement continue***");
 		screenshotUtil.captureScreenshot(className,"Click Supplement continue");
 		fleetpage.enterAccountNo(excelutil.getCellData("PreSetup","AccountNumber",readRowNo));
 		commonobjects.clickProceed(); 
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
 			Assert.assertEquals(actualmessage, expSucces);
@@ -1113,28 +1119,28 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			error.addError(e);
 		}
 		CommonStep.scenario.log("Message in Fleet Screen"+ expSucces);
-		log.info("Message in Fleet Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Fleet Screen"+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Fleet Screen");
 	}
 
 	@Then("User will navigate to payment tab and fill the requirement")
 	public void user_will_navigate_to_payment_tab_and_fill_the_requirement() throws Exception, Exception {
 		CommonStep.scenario.log("Click Cart icon");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		paymenttab.clickVerifyAddToCart();
 
-		log.info("***Verify Cart***");
+		ConfigReader.getLogInfo("***Verify Cart***");
 		screenshotUtil.captureScreenshot(className,"Verify Cart");
 		CommonStep.scenario.log("Select record & proceed");
 		CommonStep.scenario.log("Click on pay now button");
 		pay.clickPayNow();  
 
-		log.info("***Click Paynow***");
+		ConfigReader.getLogInfo("***Click Paynow***");
 		screenshotUtil.captureScreenshot(className,"Click Paynow");
 		commonobjects.clickProceed();
 		CommonStep.scenario.log("Click Proceed");
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+	//	ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		//Fetch Values from 
 		excelutilWrite.setCellData(config.writeRwcExcel(),"PaymentScreen",pay.fetchMCECustomerIdLbl(),writeRowNo,pay.fetchMCECustomerId());
 		excelutilWrite.setCellData(config.writeRwcExcel(),"PaymentScreen",pay.fetchLegalNameLbl(),writeRowNo,pay.fetchLegalName());
@@ -1156,51 +1162,51 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		CommonStep.scenario.log("Select multiple payment types and select PDF delivery type and click on proceed button");
 		for(int i=0; i<Integer.valueOf(paymentExcelCount);i++) {
 			
-			log.info("no.of rows present is:"+pay.fetchTableRowsize());
+			ConfigReader.getLogInfo("no.of rows present is:"+pay.fetchTableRowsize());
 			if(pay.fetchTableRowsize()<Integer.valueOf(paymentExcelCount)) {
 				paymenttab.clickPaymenToAdd();
 				}
 			String PaymentType=excelutil.getCellData("Payment","PaymentType"+i,readRowNo);
 			String PaymentNumberValue=excelutil.getCellData("Payment","PaymentChequeNo",readRowNo);
 			pay.selectPaymentType(i,PaymentType);	
-			log.info("***Payment Type***");
+			ConfigReader.getLogInfo("***Payment Type***");
 			screenshotUtil.captureScreenshot(className,"Payment Type"+i);
 
 
 			pay.enterpaymentNoBasedonType(i,PaymentNumberValue);
-			log.info("***Payment Number based on Payment Type***");
+			ConfigReader.getLogInfo("***Payment Number based on Payment Type***");
 			screenshotUtil.captureScreenshot(className,"Payment Number based on  Payment Type"+i);
 
 			String totalAmount=pay.FetchTotalAmount();
-			log.info("totalAmount is "+totalAmount);
+			ConfigReader.getLogInfo("totalAmount is "+totalAmount);
 			String cashAmount=String.format("%.2f",(Double.valueOf(totalAmount)/Integer.valueOf(paymentExcelCount)));
 			if(i==(Integer.valueOf(paymentExcelCount)-1)) {
 				String RemainingAmount=pay.fetchRemainingBalance();
-				log.info("Remaining balance is:"+RemainingAmount);
+				ConfigReader.getLogInfo("Remaining balance is:"+RemainingAmount);
 				pay.enterPaymentAmountBasedonType(i,RemainingAmount);
 			}
 			else {
 				pay.enterPaymentAmountBasedonType(i,cashAmount);
 			}
 
-			log.info("***Payment Amount based on Payment Type***");
+			ConfigReader.getLogInfo("***Payment Amount based on Payment Type***");
 			screenshotUtil.captureScreenshot(className,"Payment Amount based on  Payment Type"+i);
 		}
 
 		pay.selectPaymentReceipt(excelutil.getCellData("Payment","Payment receipt",readRowNo));
-		log.info("***Enter Payment type and amount***");
+		ConfigReader.getLogInfo("***Enter Payment type and amount***");
 		String mainwidow=eleutil.GetParentWindow();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
 
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		eleutil.waitForTwoWindow(2);
 		String childWindow=eleutil.SwitchtoFirstChildWindow();
 		eleutil.saveAsFile();
 		String fileLocation=System.getProperty("user.dir")+"\\"+config.readDownloadFolder()+className+"\\";
-		log.info("fileLocation"+fileLocation);
+		ConfigReader.getLogInfo("fileLocation"+fileLocation);
 		String DesiredPath=eleutil.checkFileExistence(fileLocation,"Payment","pdf");
 		eleutil.sleepTime(4000);  //to wait for the PDF Load completely
 		eleutil.uploadFile(DesiredPath);
@@ -1221,7 +1227,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 
 		CommonStep.scenario.log("Message in Payment Screen "+ expSucces);
 
-		log.info("Message in Payment Screen "+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Payment Screen "+commonobjects.fetchErrorMessage(expSucces));
 		screenshotUtil.captureScreenshot(className,"Message in Payment Screen 1");
 
 		String actualmessage1 = commonobjects.fetchErrorMessage(expSucces2);
@@ -1232,7 +1238,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 			error.addError(e);
 		}
 		CommonStep.scenario.log("Message in Payment Screen "+ expSucces2);
-		log.info("Message in Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
+		ConfigReader.getLogInfo("Message in Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
 		screenshotUtil.captureScreenshot(className,"Message in Payment Screen 2");
 	}
 
@@ -1242,9 +1248,9 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		inventorypage.clickOperation();
 		inventorypage.clickOnInventory();
 		inventorypage.clickNewInventory();
-		log.info("***Click Inventory***");
+		ConfigReader.getLogInfo("***Click Inventory***");
 		screenshotUtil.captureScreenshot(className,"Click Inventory");
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		inventorypage.selectNewInventoryType(excelutil.getCellData("InventoryTab","Inventory_Newintype",readRowNo));
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
@@ -1256,7 +1262,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		CommonStep.scenario.log("Message in Inventory Screen"+ expSucces);
 
 
-		log.info("Message in Inventory Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Inventory Screen"+commonobjects.fetchErrorMessage(expSucces));
 
 		screenshotUtil.captureScreenshot(className,"Message in Inventory Screen");
 
@@ -1269,13 +1275,13 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		inventorypage.enterYear(excelutil.getCellData("InventoryTab","Year",readRowNo));
 
 
-		log.info("***Enter details for new inventory***");
+		ConfigReader.getLogInfo("***Enter details for new inventory***");
 		screenshotUtil.captureScreenshot(className,"Enter details for new inventory");
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		String actualmessage2 = commonobjects.fetchErrorMessage(expSucces2);
 		try {
 			Assert.assertEquals(actualmessage2, expSucces2);
@@ -1287,7 +1293,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 
 		CommonStep.scenario.log("Message in Payment Screen"+ expSucces2);
 
-		log.info("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces2));
+		ConfigReader.getLogInfo("Message in Payment Screen"+commonobjects.fetchErrorMessage(expSucces2));
 		screenshotUtil.captureScreenshot(className,"Message in Inventory Screen 2");
 		commonobjects.clickQuit();
 	}
@@ -1295,7 +1301,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 	public void assign_the_inventory_to_proceed_further(String expSucces, String expSucces2) throws Exception, Exception {
 		CommonStep.scenario.log("Go to Inventory - Assign Invetory & add required Inventory");
 		inventorypage.clickAssignInventory();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		inventorypage.selectNewInventoryType(excelutil.getCellData("InventoryTab","Inventory_Newintype",readRowNo));
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
@@ -1306,7 +1312,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Inventory Screen "+ expSucces);
 
-		log.info("Message in Inventory Screen "+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in Inventory Screen "+commonobjects.fetchErrorMessage(expSucces));
 
 		screenshotUtil.captureScreenshot(className,"Message in Inventory Screen 1");
 
@@ -1318,14 +1324,14 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 
 		inventorypage.enterYear(excelutil.getCellData("InventoryTab","Year",readRowNo));
 
-		log.info("***Enter details in Assign Inventory***");
+		ConfigReader.getLogInfo("***Enter details in Assign Inventory***");
 		screenshotUtil.captureScreenshot(className,"Enter details in Assign Inventory");
 
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		String actualmessage2 = commonobjects.fetchErrorMessage(expSucces2);
 		try {
 			Assert.assertEquals(actualmessage2, expSucces2);
@@ -1335,7 +1341,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Inventory Screen"+ expSucces2);
 
-		log.info("Message in Inventory Screen"+commonobjects.fetchErrorMessage(expSucces2));
+		ConfigReader.getLogInfo("Message in Inventory Screen"+commonobjects.fetchErrorMessage(expSucces2));
 		screenshotUtil.captureScreenshot(className,"Message in Inventory Screen 2");
 
 
@@ -1349,7 +1355,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		financepage.clickfinance();
 
 		financepage.clickpostpayment();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		financepage.enterMCEid(excelutil.getCellData("PreSetup","MCENumber",readRowNo));
 
 		financepage.clicksearch();
@@ -1376,7 +1382,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		commonobjects.waitForSpinner();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		financepage.selectpaymenttype(excelutil.getCellData("Payment","PaymentType0",readRowNo));
 
 		String totalAmount=pay.FetchTotalAmount();
@@ -1385,14 +1391,14 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 
 		pay.selectPaymentReceipt(excelutil.getCellData("Payment","Payment receipt",readRowNo));
 
-		log.info("Enter the details in installement payment and proceed");
+		ConfigReader.getLogInfo("Enter the details in installement payment and proceed");
 		screenshotUtil.captureScreenshot(className,"Enter the details in installement payment and proceed");
 
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
 		commonobjects.clickProceed();
 		commonobjects.waitForSpinner();
-		log.info(commonobjects.validateInfoMsgs());
+		ConfigReader.getLogInfo(commonobjects.validateInfoMsgs().get(0));
 		String actualmessage = commonobjects.fetchErrorMessage(expSucces);
 		try {
 			Assert.assertEquals(actualmessage, expSucces);
@@ -1402,7 +1408,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in post Payment Screen"+ expSucces);
 
-		log.info("Message in post Payment Screen"+commonobjects.fetchErrorMessage(expSucces));
+		ConfigReader.getLogInfo("Message in post Payment Screen"+commonobjects.fetchErrorMessage(expSucces));
 
 		screenshotUtil.captureScreenshot(className,"Message in post Payment Screen 1");
 
@@ -1416,7 +1422,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 		}
 		CommonStep.scenario.log("Message in Post Payment Screen "+ expSucces2);
 
-		log.info("Message in Post Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
+		ConfigReader.getLogInfo("Message in Post Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
 
 		screenshotUtil.captureScreenshot(className,"Message in post Payment Screen 2");
 
@@ -1426,7 +1432,7 @@ String vehicleBodyType=vehicleAmend.fetchAmendVehicleBodyType();
 	public void user_should_land_on_the_installement_payment_and_verify_the_amount_and_then_proceed(String expSucces, String expSucces2) throws Exception {
 		CommonStep.scenario.log("Go to Payment - Installment Payment & serach above record & complete 2nd Installment payment");
 		if(installmentPlanCheckStatus.equalsIgnoreCase("true")) {
-log.info("Installment Payment is required to do");
+ConfigReader.getLogInfo("Installment Payment is required to do");
 
 		dashboardpage.clickEnterpriseLink();
 		commonobjects.waitForSpinner();
@@ -1498,39 +1504,39 @@ log.info("Installment Payment is required to do");
 
 	String paymentExcelCount=excelutil.getCellData("Installment Payment","payment Count",readRowNo);
 	for(int i=0; i<Integer.valueOf(paymentExcelCount);i++) {
-		log.info("no.of rows present is:"+pay.fetchTableRowsize());
+		ConfigReader.getLogInfo("no.of rows present is:"+pay.fetchTableRowsize());
 		if(pay.fetchTableRowsize()<Integer.valueOf(paymentExcelCount)) {
 			paymenttab.clickPaymenToAdd();
 		}
 		String PaymentType=excelutil.getCellData("Payment","PaymentType"+i,readRowNo);
 		String PaymentNumberValue=excelutil.getCellData("Payment","PaymentChequeNo",readRowNo);
 		pay.selectPaymentType(i,PaymentType);	
-		log.info("***Payment Type***");
+		ConfigReader.getLogInfo("***Payment Type***");
 		screenshotUtil.captureScreenshot(className,"Payment Type"+i);
 
 
 		pay.enterpaymentNoBasedonType(i,PaymentNumberValue);
-		log.info("***Payment Number based on Payment Type***");
+		ConfigReader.getLogInfo("***Payment Number based on Payment Type***");
 		screenshotUtil.captureScreenshot(className,"Payment Number based on  Payment Type"+i);
 
 		String totalAmount=pay.FetchTotalAmount();
-		log.info("totalAmount is "+totalAmount);
+		ConfigReader.getLogInfo("totalAmount is "+totalAmount);
 		String cashAmount=String.format("%.2f",(Double.valueOf(totalAmount)/Integer.valueOf(paymentExcelCount)));
 		if(i==(Integer.valueOf(paymentExcelCount)-1)) {
 			String RemainingAmount=pay.fetchRemainingBalance();
-			log.info("Remaining balance is:"+RemainingAmount);
+			ConfigReader.getLogInfo("Remaining balance is:"+RemainingAmount);
 			pay.enterPaymentAmountBasedonType(i,RemainingAmount);
 		}
 		else {
 			pay.enterPaymentAmountBasedonType(i,cashAmount);
 		}
 
-		log.info("***Payment Amount based on Payment Type***");
+		ConfigReader.getLogInfo("***Payment Amount based on Payment Type***");
 		screenshotUtil.captureScreenshot(className,"Payment Amount based on  Payment Type"+i);
 	}
 
 	pay.selectPaymentReceipt(excelutil.getCellData("Payment","Payment receipt",readRowNo));
-	log.info("***Enter Payment type and amount***");
+	ConfigReader.getLogInfo("***Enter Payment type and amount***");
 	String mainwidow=eleutil.GetParentWindow();
 commonobjects.clickProceed();
 	commonobjects.waitForSpinner();
@@ -1548,7 +1554,7 @@ commonobjects.clickProceed();
 
 	CommonStep.scenario.log("Message in Installment Payment Screen "+ expSucces);
 
-	log.info("Message in Installment Payment Screen "+commonobjects.fetchErrorMessage(expSucces));
+	ConfigReader.getLogInfo("Message in Installment Payment Screen "+commonobjects.fetchErrorMessage(expSucces));
 	screenshotUtil.captureScreenshot(className,"Message in Installment Payment Screen 1");
 
 	String actualmessage1 = commonobjects.fetchErrorMessage(expSucces2);
@@ -1559,14 +1565,14 @@ commonobjects.clickProceed();
 		error.addError(e);
 	}
 	CommonStep.scenario.log("Message in Installment Payment Screen "+ expSucces2);
-	log.info("Message in Installment Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
+	ConfigReader.getLogInfo("Message in Installment Payment Screen "+commonobjects.fetchErrorMessage(expSucces2));
 	screenshotUtil.captureScreenshot(className,"Message in Installment Payment Screen 2");
 
 eleutil.waitForTwoWindow(2);
 	String childWindow=eleutil.SwitchtoFirstChildWindow();
 	eleutil.saveAsFile();
 	String fileLocation=System.getProperty("user.dir")+"\\"+config.readDownloadFolder()+className+"\\";
-	log.info("fileLocation"+fileLocation);
+	ConfigReader.getLogInfo("fileLocation"+fileLocation);
 	String DesiredPath=eleutil.checkFileExistence(fileLocation,"InstallmentPayment","pdf");
 	eleutil.sleepTime(4000);  //to wait for the PDF Load completely
 	eleutil.uploadFile(DesiredPath);
@@ -1583,5 +1589,4 @@ eleutil.waitForTwoWindow(2);
 	}
 	
 }
-
 

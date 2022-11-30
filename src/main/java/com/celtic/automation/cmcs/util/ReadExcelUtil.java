@@ -15,20 +15,20 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 public class ReadExcelUtil {
+	public Logger m;
 
 	  XSSFWorkbook workbook = null;  
-	  private static Logger log;
-	 public ReadExcelUtil(String xlFilePath)
+	 public ReadExcelUtil(String xlFilePath, Logger m)
 	    {
+		 this.m=m;
 		   FileInputStream fis = null;
 		 
 	    	try {
 	        fis = new FileInputStream(xlFilePath);
 	        workbook = new XSSFWorkbook(fis);
 	    	} catch (FileNotFoundException e) {
-	    		log.error("Error in ReadExcelUtil"+e);
 			} catch (IOException e) {
-				log.error("Error in ReadExcelUtil"+e);
+				m.error("Error in ReadExcelUtil"+e);
 			}
 	    	finally {
 				try {
@@ -36,8 +36,11 @@ public class ReadExcelUtil {
 					workbook.close(); }
 					fis.close();
 				} catch (IOException e) {
-					log.error("Error in ReadExcelUtil"+e);
-				}	}
+					
+					m.error("Error in ReadExcelUtil"+e);
+				}	
+				
+	    	}
 	    }
 	    @SuppressWarnings("incomplete-switch")
 		public  String getCellData(String SheetName,String ColumnName,int rownum) throws IOException  {
@@ -77,7 +80,8 @@ public class ReadExcelUtil {
 	        }
 		}
 		catch (Exception e) {
-			log.error("Error in ReadExcelUtil"+e);
+			
+			m.error("Error in ReadExcelUtil"+e);
 		}
 			 return cellvalue;
 			

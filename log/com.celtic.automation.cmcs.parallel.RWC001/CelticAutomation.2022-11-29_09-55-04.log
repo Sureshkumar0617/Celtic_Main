@@ -1,0 +1,76 @@
+[INFO ] 2022-11-29 21:55:04.556 [main] RWC001 - Opened Browser
+[INFO ] 2022-11-29 21:55:23.764 [main] RWC001 - ****************************** Login to the application  *****************************************
+[INFO ] 2022-11-29 21:55:24.231 [main] RWC001 - *** Enter Username ***
+[INFO ] 2022-11-29 21:55:24.624 [main] RWC001 - *** Enter Password ***
+[INFO ] 2022-11-29 21:55:26.886 [main] RWC001 - *** Click Login ***
+[INFO ] 2022-11-29 21:55:47.093 [main] RWC001 - *** Click IRP ***
+[INFO ] 2022-11-29 21:55:48.668 [main] RWC001 - *** Click RenewFleet ***
+[INFO ] 2022-11-29 21:55:49.359 [main] RWC001 - *** Enter Account Number ***
+[INFO ] 2022-11-29 21:55:49.773 [main] RWC001 - *** Enter FleetNo ***
+[INFO ] 2022-11-29 21:55:50.194 [main] RWC001 - *** Click FleetYear ***
+[INFO ] 2022-11-29 21:55:54.908 [main] RWC001 - IRPFLT143 : [W] Fleet information [USDOT No., TPID] in the system does not match with the MCE information.
+[INFO ] 2022-11-29 21:56:03.952 [main] RWC001 - *** Check Email Notification ***
+[INFO ] 2022-11-29 21:56:05.285 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 21:56:31.982 [main] RWC001 - GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+[INFO ] 2022-11-29 21:56:32.154 [main] RWC001 - Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+[INFO ] 2022-11-29 21:56:32.462 [main] RWC001 - *** navigateToServiceProvider ***
+[INFO ] 2022-11-29 21:56:32.833 [main] RWC001 - *** Click PowerofAttroney ***
+[INFO ] 2022-11-29 21:56:33.352 [main] RWC001 - *** Entering the Emailid ***
+[INFO ] 2022-11-29 21:56:33.560 [main] RWC001 - Date is retrieved
+[INFO ] 2022-11-29 21:56:33.614 [main] RWC001 - *** Selecting the Expiration Date ***
+[INFO ] 2022-11-29 21:56:33.998 [main] RWC001 - *** Selecting the IRPRequirementForm ***
+[INFO ] 2022-11-29 21:56:34.364 [main] RWC001 - *** Selecting StatementofUnderstanding ***
+[INFO ] 2022-11-29 21:56:34.683 [main] RWC001 - *** Selecting InstallmentAgreement ***
+[INFO ] 2022-11-29 21:56:35.022 [main] RWC001 - *** Selecting PowerOfAttroney ***
+[INFO ] 2022-11-29 21:56:35.371 [main] RWC001 - *** Selecting HVUTForm ***
+[INFO ] 2022-11-29 21:56:35.720 [main] RWC001 - *** Selecting PropertyTax ***
+[INFO ] 2022-11-29 21:56:37.070 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 21:57:31.590 [main] RWC001 - IRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 21:57:31.645 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 21:57:31.979 [main] RWC001 - Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+[INFO ] 2022-11-29 21:57:33.084 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 21:57:43.035 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-29 21:57:43.035 [main] RWC001 - Weight Group RowDatavalues1
+[INFO ] 2022-11-29 21:57:43.104 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-29 21:57:43.104 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-29 21:57:43.150 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-29 21:57:43.150 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-29 21:57:43.206 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-29 21:57:43.206 [main] RWC001 - Weight Group RowDatavalues80000
+[INFO ] 2022-11-29 21:57:43.255 [main] RWC001 - Weight Group headervalues
+[INFO ] 2022-11-29 21:57:43.255 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-29 21:57:43.296 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP NO.
+[INFO ] 2022-11-29 21:57:43.296 [main] RWC001 - Weight Group RowDatavalues2
+[INFO ] 2022-11-29 21:57:43.343 [main] RWC001 - Weight Group headervaluesWEIGHT GROUP TYPE
+[INFO ] 2022-11-29 21:57:43.343 [main] RWC001 - Weight Group RowDatavaluesP - POWER UNIT
+[INFO ] 2022-11-29 21:57:43.396 [main] RWC001 - Weight Group headervaluesBASE JURISDICTION WEIGHT
+[INFO ] 2022-11-29 21:57:43.396 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-29 21:57:43.448 [main] RWC001 - Weight Group headervaluesMAX GROSS WEIGHT
+[INFO ] 2022-11-29 21:57:43.448 [main] RWC001 - Weight Group RowDatavalues66000
+[INFO ] 2022-11-29 21:57:43.493 [main] RWC001 - Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+[INFO ] 2022-11-29 21:57:43.493 [main] RWC001 - Weight Group RowDatavalues
+[INFO ] 2022-11-29 21:57:43.625 [main] RWC001 - IRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-29 21:57:43.682 [main] RWC001 - Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+[INFO ] 2022-11-29 21:57:46.513 [main] RWC001 - *** Click AddweightGroup ***
+[INFO ] 2022-11-29 21:57:46.940 [main] RWC001 - *** Select WeightGroupType ***
+[INFO ] 2022-11-29 21:57:47.356 [main] RWC001 - *** Enter WeightGroup No ***
+[INFO ] 2022-11-29 21:57:47.621 [main] RWC001 - *** Select MaxGross Weight ***
+[INFO ] 2022-11-29 21:58:08.753 [main] RWC001 - Number of Vehicles to be Amended is greater than zero Hence about to click the Amend Vehicle Radio Button
+[INFO ] 2022-11-29 21:58:08.835 [main] RWC001 - *** Click AmendVehicle RadioButton ***
+[INFO ] 2022-11-29 21:58:14.340 [main] RWC001 - IRPVEH375 : [I] Please search the VIN first to process a vehicle.
+[INFO ] 2022-11-29 21:58:14.445 [main] RWC001 - Message in Amend Vehicle ScreenIRPVEH375 : [I] Please search the VIN first to process a vehicle.
+[INFO ] 2022-11-29 21:58:14.829 [main] RWC001 - *** Enter Unit number ***
+[INFO ] 2022-11-29 21:58:25.036 [main] RWC001 - *** Enter WeightGroupNo ***
+[INFO ] 2022-11-29 21:58:30.393 [main] RWC001 - Message in Amend Vehicle Screennull
+[INFO ] 2022-11-29 21:58:30.638 [main] RWC001 - *** Enter UnladenWeight ***
+[INFO ] 2022-11-29 21:58:31.799 [main] RWC001 - *** Click TVR ***
+[INFO ] 2022-11-29 21:58:32.125 [main] RWC001 - *** Select Safety Changedd ***
+[INFO ] 2022-11-29 21:58:32.462 [main] RWC001 - *** Select HVUTForm2290 ***
+[INFO ] 2022-11-29 21:58:32.725 [main] RWC001 - *** Select LeaseContract ***
+[INFO ] 2022-11-29 21:58:33.068 [main] RWC001 - *** Select TitleDocument ***
+[INFO ] 2022-11-29 21:58:33.353 [main] RWC001 - *** Select PlateReturndoc ***
+[INFO ] 2022-11-29 21:58:33.649 [main] RWC001 - *** Select AffidavitDoc ***
+[INFO ] 2022-11-29 21:58:33.956 [main] RWC001 - *** Select PropertyTax ***
+[INFO ] 2022-11-29 21:58:35.319 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 21:58:45.587 [main] RWC001 - Message in Amend Vehicle Screen IRPVEH004 : [I] Vehicle amended successfully.
+[INFO ] 2022-11-29 21:58:45.960 [main] RWC001 - *** Enter Unit number ***

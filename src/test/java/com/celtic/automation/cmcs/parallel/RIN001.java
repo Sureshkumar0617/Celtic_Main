@@ -44,8 +44,8 @@ public void user_login_as_an_internal_user() throws Exception {
 	System.setProperty("file.path.can",path);
 	log = LogManager.getLogger(test);
 	config.initprop();
-	excelutil = new ReadExcelUtil(config.readRwcExcel());
-	excelutilWrite=new WriteExcelUtil();
+	//excelutil = new ReadExcelUtil(config.readRwcExcel());
+	//excelutilWrite=new WriteExcelUtil();
 	excelutilWrite.setCellData(config.writeRinExcel(),"Sheet1","Account",writeRowNo,"30942");
 
 	CommonStep.scenario.log("Launch the application using URL and login with valid credentials");

@@ -46,7 +46,6 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -74,14 +73,18 @@ public class ElementUtil {
 	public static WebDriver driver=DriverFactory.getDriver();
 	public static WebDriverWait wait;
 	public static String mainWindow;
-	private static Logger log ;
-
-	public static ElementUtil getInstance(){
-		if(elementUtil==null){
-			elementUtil= new ElementUtil();
-		}
-		return elementUtil;
-}
+	public Logger logg;
+	
+	public ElementUtil(Logger logg) {
+		this.logg=logg;
+	}
+	
+	/*
+	 * public static ElementUtil getInstance(){
+	 * 
+	 * if(elementUtil==null){ elementUtil= new ElementUtil(s); } return elementUtil;
+	 * }
+	 */
 public static int getPageCount(PDDocument doc) {
 	//get the total number of pages in the pdf document
 	int pageCount = doc.getNumberOfPages();
@@ -90,12 +93,14 @@ public static int getPageCount(PDDocument doc) {
 }
 public  void sleepTime(long milliseconds) {
 	try {
+		
 		Thread.sleep(milliseconds);
 	} catch (InterruptedException e) {
-		log.error("Error in ElementUtil"+e);
+		logg.error("Error in ElementUtil"+e);
 	}
 }
 public String getTitle() {
+
 	return driver.getTitle();
 }
 public static Boolean isElementEnabled(WebElement ele) {
@@ -117,7 +122,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 			jsonObject = (JSONObject)obj;
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			log.error("Error in ElementUtil"+e);
+			logg.error("Error in ElementUtil"+e);
 		}
 		return jsonObject;
 	}
@@ -161,6 +166,8 @@ public static Boolean isElementEnabled(WebElement ele) {
 
 			File finalDestination = new File(destination);
 			FileUtils.copyFile(source, finalDestination);
+		
+
 		}
 	
 
@@ -269,9 +276,11 @@ public static Boolean isElementEnabled(WebElement ele) {
 							 }
 
 						 }
-		}
+		} 
+		
 		catch(Exception e)
 		{
+			
 			throw e;
 		}
 	}
@@ -377,7 +386,6 @@ public static Boolean isElementEnabled(WebElement ele) {
 				break;
 			}
 			catch (StaleElementReferenceException e) {
-				log.error("Error in ElementUtil"+e);
 			}
 			attempts++;
 		}
@@ -392,7 +400,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 		try {
 			driver.navigate().refresh();
 		} catch (Exception e) {
-			log.error("Error in ElementUtil"+e);
+			logg.error("Error in ElementUtil"+e);
 			throw e;
 		}
 	}
@@ -631,6 +639,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 			sleepTime(500);
 		}
 		catch (Exception e) {
+			
 			throw e;
 		}
 
@@ -665,7 +674,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 			robot.keyRelease(KeyEvent.VK_ENTER);
 			sleepTime(500);
 		} catch (Exception e) {
-			log.error("Error in ElementUtil"+e);
+			logg.error("Error in ElementUtil"+e);
 			throw e;
 		}
 	}
@@ -783,7 +792,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 		}
 		catch (AWTException e)
 		{
-			log.error("Error in ElementUtil"+e);
+			logg.error("Error in ElementUtil"+e);
 		}
 
 	}
@@ -809,7 +818,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 		}
 		catch (AWTException e)
 		{
-			log.error("Error in ElementUtil"+e);
+			logg.error("Error in ElementUtil"+e);
 		}
 
 	}
@@ -1092,6 +1101,7 @@ public static Boolean isElementEnabled(WebElement ele) {
 		DateFormat dateFormat = new SimpleDateFormat(requiredDateFormat);
 		Calendar cal = Calendar.getInstance();
 		cal.add(Calendar.DATE, days);
+		logg.info("Date is retrieved");
 		return dateFormat.format(cal.getTime());
 	}
 	/*

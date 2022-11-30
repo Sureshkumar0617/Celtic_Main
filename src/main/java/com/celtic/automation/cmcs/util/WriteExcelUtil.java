@@ -18,8 +18,11 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 
 public class WriteExcelUtil {
+	public Logger w;
+	public WriteExcelUtil(Logger w) {
+		this.w=w;
+	}
 	private Map<String, Integer> columns =null;
-	private static Logger log ;
 	public  void setCellData(String filepath,String sheetname, String columnName, int rownum,String value) throws IOException {
 		FileInputStream fis = null;
 		 
@@ -96,7 +99,7 @@ public class WriteExcelUtil {
 			workbook.write(out); 
 		}
 		catch (Exception e) {
-			log.error("Error in WriteExcelUtil"+e);
+			w.error("Error in WriteExcelUtil"+e);
 		}
 
 		finally {

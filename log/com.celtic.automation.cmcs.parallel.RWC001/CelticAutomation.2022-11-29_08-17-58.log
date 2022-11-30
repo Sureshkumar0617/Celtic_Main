@@ -1,0 +1,118 @@
+[INFO ] 2022-11-29 20:17:58.971 [main] RWC001 - Opened Browser
+[INFO ] 2022-11-29 20:17:59.564 [main] RWC001 - Testing Purpose Working Fine
+[INFO ] 2022-11-29 20:18:46.877 [main] RWC001 - ****************************** Login to the application  *****************************************
+[INFO ] 2022-11-29 20:18:47.377 [main] RWC001 - *** Enter Username ***
+[INFO ] 2022-11-29 20:18:47.848 [main] RWC001 - *** Enter Password ***
+[INFO ] 2022-11-29 20:18:51.940 [main] RWC001 - *** Click Login ***
+[INFO ] 2022-11-29 20:19:44.894 [main] RWC001 - *** Click IRP ***
+[INFO ] 2022-11-29 20:19:47.690 [main] RWC001 - *** Click RenewFleet ***
+[INFO ] 2022-11-29 20:19:48.448 [main] RWC001 - *** Enter Account Number ***
+[INFO ] 2022-11-29 20:19:48.909 [main] RWC001 - *** Enter FleetNo ***
+[INFO ] 2022-11-29 20:19:49.377 [main] RWC001 - *** Click FleetYear ***
+[INFO ] 2022-11-29 20:19:56.384 [main] RWC001 - IRPFLT143 : [W] Fleet information [USDOT No., TPID] in the system does not match with the MCE information.
+[INFO ] 2022-11-29 20:19:56.590 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:57.262 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:57.751 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:58.094 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:58.451 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:58.917 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:19:59.378 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:00.218 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:00.692 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:01.103 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:01.543 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:02.132 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:02.553 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:03.367 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:03.779 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:04.172 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:04.572 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:04.955 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:05.243 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:05.540 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:05.817 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:06.125 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:06.411 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:06.717 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:07.000 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:07.242 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:07.489 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:07.642 [main] RWC001 - *** Check Email Notification ***
+[INFO ] 2022-11-29 20:20:09.167 [main] RWC001 - *** Enter Comments ***
+[INFO ] 2022-11-29 20:20:32.725 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:33.015 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:33.284 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:33.561 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:33.879 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:34.250 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:34.654 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:34.972 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:35.301 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:35.638 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:35.985 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:36.473 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:36.810 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:37.175 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:37.575 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:37.942 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:38.309 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:38.643 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:38.977 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:39.577 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:39.928 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:40.273 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:40.621 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:40.980 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:41.301 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:41.618 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:41.977 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:42.311 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:42.671 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:42.963 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:43.271 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:43.596 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:43.951 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:44.436 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:44.762 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:45.152 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:45.458 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:45.792 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:46.109 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:46.430 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:46.678 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:46.940 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:47.208 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:47.504 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:47.785 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:48.032 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:48.293 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:48.558 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:48.862 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:49.164 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:49.412 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:49.683 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:49.911 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:50.159 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:50.419 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:50.684 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:50.899 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:51.214 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:51.543 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:51.861 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:52.156 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:52.439 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:52.766 [main] RWC001 - Testing writeexcel
+[INFO ] 2022-11-29 20:20:53.107 [main] RWC001 - GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+[INFO ] 2022-11-29 20:20:53.308 [main] RWC001 - Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+[INFO ] 2022-11-29 20:20:53.639 [main] RWC001 - *** navigateToServiceProvider ***
+[INFO ] 2022-11-29 20:20:54.025 [main] RWC001 - *** Click PowerofAttroney ***
+[INFO ] 2022-11-29 20:20:54.588 [main] RWC001 - *** Entering the Emailid ***
+[INFO ] 2022-11-29 20:20:54.825 [main] RWC001 - Date is retrieved
+[INFO ] 2022-11-29 20:20:54.886 [main] RWC001 - *** Selecting the Expiration Date ***
+[INFO ] 2022-11-29 20:20:55.300 [main] RWC001 - *** Selecting the IRPRequirementForm ***
+[INFO ] 2022-11-29 20:20:55.688 [main] RWC001 - *** Selecting StatementofUnderstanding ***
+[INFO ] 2022-11-29 20:20:56.037 [main] RWC001 - *** Selecting InstallmentAgreement ***
+[INFO ] 2022-11-29 20:20:56.369 [main] RWC001 - *** Selecting PowerOfAttroney ***
+[INFO ] 2022-11-29 20:20:56.740 [main] RWC001 - *** Selecting HVUTForm ***
+[INFO ] 2022-11-29 20:20:57.103 [main] RWC001 - *** Selecting PropertyTax ***
+[INFO ] 2022-11-29 20:20:58.556 [main] RWC001 - *** Enter Comments ***
