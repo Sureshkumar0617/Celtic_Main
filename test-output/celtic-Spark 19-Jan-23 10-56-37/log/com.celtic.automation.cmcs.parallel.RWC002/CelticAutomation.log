@@ -1,0 +1,782 @@
+Jan 19, 2023 10:56:46 AM com.celtic.automation.cmcs.util.Loggers configureLoggerSystem
+INFO: *************************************The Execution is started********************************************************
+Jan 19, 2023 10:56:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Test Execution is about to begin ***
+Jan 19, 2023 10:56:46 AM com.celtic.automation.cmcs.util.ConfigReader initprop
+INFO: Log information from config reader file java.io.FileInputStream@233cc2a0
+Jan 19, 2023 10:57:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ****************************** Login to the application  *****************************************
+Jan 19, 2023 10:57:20 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC002-Launch the application using URL
+Jan 19, 2023 10:57:20 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil internaluser is entering into 
+Jan 19, 2023 10:57:20 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Username ***
+Jan 19, 2023 10:57:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC002-Enter Username
+Jan 19, 2023 10:57:21 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Shine@48 is entering into 
+Jan 19, 2023 10:57:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Password ***
+Jan 19, 2023 10:57:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC002-Enter password
+Jan 19, 2023 10:57:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click Login ***
+Jan 19, 2023 10:57:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC002-click on Login
+Jan 19, 2023 10:57:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click IRP ***
+Jan 19, 2023 10:57:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click Fleet More ***
+Jan 19, 2023 10:57:43 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click Fleet Reinstatement ***
+Jan 19, 2023 10:57:44 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 10:57:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Account Number ***
+Jan 19, 2023 10:57:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Last Inactive Days ***
+Jan 19, 2023 10:57:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Validating the information Message ***
+Jan 19, 2023 10:57:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: [I] MCE: IRP status successfully updated.
+Jan 19, 2023 10:58:32 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter  Receipt  Date ***
+Jan 19, 2023 10:58:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Validating the information Message ***
+Jan 19, 2023 10:58:38 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPBILL01 : [I] Reinstatement process completed successfully.
+Jan 19, 2023 10:58:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click IRP ***
+Jan 19, 2023 10:58:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click RenewFleet ***
+Jan 19, 2023 10:58:46 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 10:58:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Account Number ***
+Jan 19, 2023 10:58:47 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 10:58:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter FleetNo ***
+Jan 19, 2023 10:58:48 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2022 is entering into 
+Jan 19, 2023 10:58:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click FleetYear ***
+Jan 19, 2023 10:59:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Check Email Notification ***
+Jan 19, 2023 10:59:25 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Accounts Comments is entering into 
+Jan 19, 2023 10:59:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 11:00:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT116 : [I] No power unit exist in this Fleet.
+Jan 19, 2023 11:00:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT125 : [I] Please note that your Fleet Expiration Month is changed.
+Jan 19, 2023 11:00:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT129 : [I] Account has 0 power unit fleet(s) for 2023. Account has 1 power unit fleet(s) for 2022.
+Jan 19, 2023 11:00:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 11:00:34 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 11:00:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** navigateToServiceProvider ***
+Jan 19, 2023 11:00:36 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click PowerofAttroney ***
+Jan 19, 2023 11:00:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Entering the Emailid ***
+Jan 19, 2023 11:00:38 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Entering the Contact Name ***
+Jan 19, 2023 11:00:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Entering the Primary Phone Number ***
+Jan 19, 2023 11:00:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting  the Fleet Type ***
+Jan 19, 2023 11:00:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selectng  the Commondity Class ***
+Jan 19, 2023 11:00:43 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the Effective Date ***
+Jan 19, 2023 11:00:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the Expiration Date ***
+Jan 19, 2023 11:00:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the First Operated Date ***
+Jan 19, 2023 11:00:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting PowerOfAttroney ***
+Jan 19, 2023 11:00:48 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil FleettabComments is entering into 
+Jan 19, 2023 11:00:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 11:03:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 11:03:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: [I] MCE: IRP status successfully updated.
+Jan 19, 2023 11:03:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 11:03:38 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 11:03:41 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting yes or No of Reporting period Question***
+Jan 19, 2023 11:03:41 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Distance tab Comments is entering into 
+Jan 19, 2023 11:03:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 11:03:58 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervalues
+Jan 19, 2023 11:03:58 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 11:03:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP NO.
+Jan 19, 2023 11:03:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues1
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP TYPE
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavaluesP - POWER UNIT
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesBASE JURISDICTION WEIGHT
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues6000
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesMAX GROSS WEIGHT
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues6000
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+Jan 19, 2023 11:04:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 11:04:01 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPMLG13 : [I] Renewal Distance has been generated.
+Jan 19, 2023 11:04:01 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+Jan 19, 2023 11:04:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click AddweightGroup ***
+Jan 19, 2023 11:04:07 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select WeightGroupType ***
+Jan 19, 2023 11:04:08 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4 is entering into 
+Jan 19, 2023 11:04:09 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter WeightGroup No ***
+Jan 19, 2023 11:04:10 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select MaxGross Weight ***
+Jan 19, 2023 11:04:20 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click AddweightGroup ***
+Jan 19, 2023 11:04:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select WeightGroupType ***
+Jan 19, 2023 11:04:22 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 6 is entering into 
+Jan 19, 2023 11:04:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter WeightGroup No ***
+Jan 19, 2023 11:04:23 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select MaxGross Weight ***
+Jan 19, 2023 11:04:32 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click AddweightGroup ***
+Jan 19, 2023 11:04:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select WeightGroupType ***
+Jan 19, 2023 11:04:34 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 8 is entering into 
+Jan 19, 2023 11:04:34 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter WeightGroup No ***
+Jan 19, 2023 11:04:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select MaxGross Weight ***
+Jan 19, 2023 11:04:48 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5999 is entering into 
+Jan 19, 2023 11:04:50 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5999 is entering into 
+Jan 19, 2023 11:04:52 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5999 is entering into 
+Jan 19, 2023 11:05:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Number of Vehicles to be Add is greater than zero Hence about to click the Add Vehicle Radio Button
+Jan 19, 2023 11:05:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click Add Vehicle RadioButton ***
+Jan 19, 2023 11:05:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPVEH375 : [I] Please search the VIN first to process a vehicle.
+Jan 19, 2023 11:05:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Add Vehicle ScreenIRPVEH375 : [I] Please search the VIN first to process a vehicle.
+Jan 19, 2023 11:05:26 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4FGB120269C112391 is entering into 
+Jan 19, 2023 11:05:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter VIN Before Add ***
+Jan 19, 2023 11:05:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Body Type ***
+Jan 19, 2023 11:05:41 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 11:05:41 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Unit Number ***
+Jan 19, 2023 11:05:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter WeightGroupNo ***
+Jan 19, 2023 11:05:43 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2009 is entering into 
+Jan 19, 2023 11:05:43 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Year ***
+Jan 19, 2023 11:05:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Make ***
+Jan 19, 2023 11:05:45 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 3 is entering into 
+Jan 19, 2023 11:05:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Axle ***
+Jan 19, 2023 11:05:47 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10000 is entering into 
+Jan 19, 2023 11:05:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter UnladenWeight ***
+Jan 19, 2023 11:05:48 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 13 is entering into 
+Jan 19, 2023 11:05:49 AM com.celtic.automation.cmcs.pages.VehicleAdd enterseats
+INFO: Seats are not entered
+Jan 19, 2023 11:05:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Seats ***
+Jan 19, 2023 11:05:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Combined Axle ***
+Jan 19, 2023 11:05:51 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Vehicle Color ***
+Jan 19, 2023 11:05:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Purchase Date ***
+Jan 19, 2023 11:05:55 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1000 is entering into 
+Jan 19, 2023 11:05:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Purchase price ***
+Jan 19, 2023 11:05:57 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5000 is entering into 
+Jan 19, 2023 11:05:57 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Factory price ***
+Jan 19, 2023 11:06:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle-  Click TVR ***
+Jan 19, 2023 11:06:01 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 45 is entering into 
+Jan 19, 2023 11:06:02 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Number of TVR Days ***
+Jan 19, 2023 11:06:03 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select Title Juri ***
+Jan 19, 2023 11:06:04 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 11:06:04 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Title Number ***
+Jan 19, 2023 11:06:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Check Existing plate ***
+Jan 19, 2023 11:06:07 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 01AB4C is entering into 
+Jan 19, 2023 11:06:07 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Existing plate ***
+Jan 19, 2023 11:06:09 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter InState ExpirationDate ***
+Jan 19, 2023 11:06:10 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4AA5 is entering into 
+Jan 19, 2023 11:06:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter InState Plate ***
+Jan 19, 2023 11:06:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select InState Plate Type ***
+Jan 19, 2023 11:06:13 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 54000 is entering into 
+Jan 19, 2023 11:06:13 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter In State Plate Weight ***
+Jan 19, 2023 11:06:13 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10 is entering into 
+Jan 19, 2023 11:06:14 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter In State Fee ***
+Jan 19, 2023 11:06:15 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil SUCCESS TRUCK LEASING INC is entering into 
+Jan 19, 2023 11:06:16 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Owner Name ***
+Jan 19, 2023 11:06:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select Safety Change ***
+Jan 19, 2023 11:06:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- check Grade Crossing Fee ***
+Jan 19, 2023 11:06:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- check Bicenetenniall ***
+Jan 19, 2023 11:06:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- checkSecondPlateFee***
+Jan 19, 2023 11:06:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- select Affidavit Doc ***
+Jan 19, 2023 11:06:23 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Vehicle-Add Comments is entering into 
+Jan 19, 2023 11:06:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 11:06:38 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Amend Vehicle Screen null
+Jan 19, 2023 11:06:39 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1FTXW43R39EA68016 is entering into 
+Jan 19, 2023 11:06:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter VIN Before Add ***
+Jan 19, 2023 11:06:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Body Type ***
+Jan 19, 2023 11:06:47 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2 is entering into 
+Jan 19, 2023 11:06:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Unit Number ***
+Jan 19, 2023 11:06:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter WeightGroupNo ***
+Jan 19, 2023 11:06:50 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2022 is entering into 
+Jan 19, 2023 11:06:51 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Year ***
+Jan 19, 2023 11:06:52 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Make ***
+Jan 19, 2023 11:06:53 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 3 is entering into 
+Jan 19, 2023 11:06:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Axle ***
+Jan 19, 2023 11:06:54 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10000 is entering into 
+Jan 19, 2023 11:06:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter UnladenWeight ***
+Jan 19, 2023 11:06:56 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 13 is entering into 
+Jan 19, 2023 11:06:56 AM com.celtic.automation.cmcs.pages.VehicleAdd enterseats
+INFO: Seats are not entered
+Jan 19, 2023 11:06:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle-Enter Seats ***
+Jan 19, 2023 11:06:57 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Combined Axle ***
+Jan 19, 2023 11:06:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Vehicle Color ***
+Jan 19, 2023 11:07:01 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Purchase Date ***
+Jan 19, 2023 11:07:02 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1000 is entering into 
+Jan 19, 2023 11:07:02 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Purchase price ***
+Jan 19, 2023 11:07:03 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5000 is entering into 
+Jan 19, 2023 11:07:04 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Factory price ***
+Jan 19, 2023 11:07:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle-  Click TVR ***
+Jan 19, 2023 11:07:07 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 45 is entering into 
+Jan 19, 2023 11:07:08 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Number of TVR Days ***
+Jan 19, 2023 11:07:09 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select Title Juri ***
+Jan 19, 2023 11:07:10 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2 is entering into 
+Jan 19, 2023 11:07:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Title Number ***
+Jan 19, 2023 11:07:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Check Existing plate ***
+Jan 19, 2023 11:07:13 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil JF853KR7M is entering into 
+Jan 19, 2023 11:07:14 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter Existing plate ***
+Jan 19, 2023 11:07:15 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter InState ExpirationDate ***
+Jan 19, 2023 11:07:16 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 6AA5 is entering into 
+Jan 19, 2023 11:07:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter InState Plate ***
+Jan 19, 2023 11:07:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select InState Plate Type ***
+Jan 19, 2023 11:07:19 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 78000 is entering into 
+Jan 19, 2023 11:07:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter In State Plate Weight ***
+Jan 19, 2023 11:07:20 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10 is entering into 
+Jan 19, 2023 11:07:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Enter In State Fee ***
+Jan 19, 2023 11:07:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- Select Safety Change ***
+Jan 19, 2023 11:07:23 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- check Grade Crossing Fee ***
+Jan 19, 2023 11:07:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- check Bicenetenniall ***
+Jan 19, 2023 11:07:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- checkSecondPlateFee***
+Jan 19, 2023 11:07:27 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle- select Affidavit Doc ***
+Jan 19, 2023 11:07:28 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Vehicle-Add Comments is entering into 
+Jan 19, 2023 11:07:29 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 11:07:43 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Amend Vehicle Screen null
+Jan 19, 2023 11:07:53 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Number of Vehicles to be deleted is greater than zero Hence about to click the Vehicle List
+Jan 19, 2023 11:07:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click VehicleList ***
+Jan 19, 2023 11:07:56 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4FGB120269C112391 is entering into 
+Jan 19, 2023 11:07:57 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Cancel- Enter VIN No ***
+Jan 19, 2023 11:07:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Cancel- click on Search ***
+Jan 19, 2023 11:08:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1062 : [I] Cancellation completed successfully.
+Jan 19, 2023 11:08:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Vehicle Cancel Screennull
+Jan 19, 2023 11:08:07 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Again-Click Add Vehicle RadioButton ***
+Jan 19, 2023 11:08:12 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4FGB120269C112391 is entering into 
+Jan 19, 2023 11:08:13 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again - Enter VIN Before Add ***
+Jan 19, 2023 11:08:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Body Type ***
+Jan 19, 2023 11:08:23 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 11:08:23 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Unit Number ***
+Jan 19, 2023 11:08:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter WeightGroupNo ***
+Jan 19, 2023 11:08:25 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2009 is entering into 
+Jan 19, 2023 11:08:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Year ***
+Jan 19, 2023 11:08:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Make ***
+Jan 19, 2023 11:08:26 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 3 is entering into 
+Jan 19, 2023 11:08:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Axle ***
+Jan 19, 2023 11:08:27 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10000 is entering into 
+Jan 19, 2023 11:08:27 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter UnladenWeight ***
+Jan 19, 2023 11:08:28 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 13 is entering into 
+Jan 19, 2023 11:08:28 AM com.celtic.automation.cmcs.pages.VehicleAdd enterseats
+INFO: Seats are not entered
+Jan 19, 2023 11:08:28 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Seats ***
+Jan 19, 2023 11:08:28 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Combined Axle ***
+Jan 19, 2023 11:08:29 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Vehicle Color ***
+Jan 19, 2023 11:08:31 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Purchase Date ***
+Jan 19, 2023 11:08:32 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1000 is entering into 
+Jan 19, 2023 11:08:32 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Purchase price ***
+Jan 19, 2023 11:08:33 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5000 is entering into 
+Jan 19, 2023 11:08:34 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Factory price ***
+Jan 19, 2023 11:08:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again -  Click TVR ***
+Jan 19, 2023 11:08:37 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 45 is entering into 
+Jan 19, 2023 11:08:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Number of TVR Days ***
+Jan 19, 2023 11:08:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select Title Juri ***
+Jan 19, 2023 11:08:40 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 11:08:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Title Number ***
+Jan 19, 2023 11:08:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Check Existing plate ***
+Jan 19, 2023 11:08:44 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 01AB4C is entering into 
+Jan 19, 2023 11:08:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Existing plate ***
+Jan 19, 2023 11:08:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter InState ExpirationDate ***
+Jan 19, 2023 11:08:48 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 4AA5 is entering into 
+Jan 19, 2023 11:08:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter InState Plate ***
+Jan 19, 2023 11:08:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select InState Plate Type ***
+Jan 19, 2023 11:08:50 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 54000 is entering into 
+Jan 19, 2023 11:08:51 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter In State Plate Weight ***
+Jan 19, 2023 11:08:52 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10 is entering into 
+Jan 19, 2023 11:08:52 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter In State Fee ***
+Jan 19, 2023 11:08:53 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil SUCCESS TRUCK LEASING INC is entering into 
+Jan 19, 2023 11:08:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Owner Name ***
+Jan 19, 2023 11:08:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select Safety Change ***
+Jan 19, 2023 11:08:55 AM com.celtic.automation.cmcs.util.ExcelUtil getCellData
+INFO: Error in ReadExcelUtiljava.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+Jan 19, 2023 11:08:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - check Grade Crossing Fee ***
+Jan 19, 2023 11:08:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - check Bicenetenniall ***
+Jan 19, 2023 11:08:58 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - checkSecondPlateFee***
+Jan 19, 2023 11:08:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - select Affidavit Doc ***
+Jan 19, 2023 11:09:16 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click VehicleList ***
+Jan 19, 2023 11:09:17 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1FTXW43R39EA68016 is entering into 
+Jan 19, 2023 11:09:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Cancel- Enter VIN No ***
+Jan 19, 2023 11:09:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Cancel- click on Search ***
+Jan 19, 2023 11:09:28 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1062 : [I] Cancellation completed successfully.
+Jan 19, 2023 11:09:28 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Vehicle Cancel Screennull
+Jan 19, 2023 11:09:29 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Again-Click Add Vehicle RadioButton ***
+Jan 19, 2023 11:09:33 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1FTXW43R39EA68016 is entering into 
+Jan 19, 2023 11:09:34 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again - Enter VIN Before Add ***
+Jan 19, 2023 11:09:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Body Type ***
+Jan 19, 2023 11:09:44 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2 is entering into 
+Jan 19, 2023 11:09:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Unit Number ***
+Jan 19, 2023 11:09:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter WeightGroupNo ***
+Jan 19, 2023 11:09:47 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2022 is entering into 
+Jan 19, 2023 11:09:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Year ***
+Jan 19, 2023 11:09:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Make ***
+Jan 19, 2023 11:09:50 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 3 is entering into 
+Jan 19, 2023 11:09:51 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Axle ***
+Jan 19, 2023 11:09:52 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10000 is entering into 
+Jan 19, 2023 11:09:52 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter UnladenWeight ***
+Jan 19, 2023 11:09:53 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 13 is entering into 
+Jan 19, 2023 11:09:53 AM com.celtic.automation.cmcs.pages.VehicleAdd enterseats
+INFO: Seats are not entered
+Jan 19, 2023 11:09:53 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Add Vehicle again -Enter Seats ***
+Jan 19, 2023 11:09:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Combined Axle ***
+Jan 19, 2023 11:09:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Vehicle Color ***
+Jan 19, 2023 11:09:57 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Purchase Date ***
+Jan 19, 2023 11:09:58 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1000 is entering into 
+Jan 19, 2023 11:09:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Purchase price ***
+Jan 19, 2023 11:10:00 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 5000 is entering into 
+Jan 19, 2023 11:10:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Factory price ***
+Jan 19, 2023 11:10:02 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again -  Click TVR ***
+Jan 19, 2023 11:10:03 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 45 is entering into 
+Jan 19, 2023 11:10:04 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Number of TVR Days ***
+Jan 19, 2023 11:10:05 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select Title Juri ***
+Jan 19, 2023 11:10:06 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2 is entering into 
+Jan 19, 2023 11:10:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Title Number ***
+Jan 19, 2023 11:10:07 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Check Existing plate ***
+Jan 19, 2023 11:10:08 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil JF853KR7M is entering into 
+Jan 19, 2023 11:10:09 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Existing plate ***
+Jan 19, 2023 11:10:10 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter InState ExpirationDate ***
+Jan 19, 2023 11:10:11 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 6AA5 is entering into 
+Jan 19, 2023 11:10:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter InState Plate ***
+Jan 19, 2023 11:10:13 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select InState Plate Type ***
+Jan 19, 2023 11:10:14 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 78000 is entering into 
+Jan 19, 2023 11:10:14 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter In State Plate Weight ***
+Jan 19, 2023 11:10:15 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10 is entering into 
+Jan 19, 2023 11:10:16 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter In State Fee ***
+Jan 19, 2023 11:10:16 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Select Safety Change ***
+Jan 19, 2023 11:10:17 AM com.celtic.automation.cmcs.util.ExcelUtil getCellData
+INFO: Error in ReadExcelUtiljava.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.Map.get(Object)" is null
+Jan 19, 2023 11:10:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - check Grade Crossing Fee ***
+Jan 19, 2023 11:10:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - check Bicenetenniall ***
+Jan 19, 2023 11:10:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - checkSecondPlateFee***
+Jan 19, 2023 11:10:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - select Affidavit Doc ***
+Jan 19, 2023 11:10:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Number of Vehicles to be Modified is greater than zero Hence about to click the Amend Vehicle Radio Button
+Jan 19, 2023 11:10:37 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click VehicleList ***
+Jan 19, 2023 11:10:38 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1FTXW43R39EA68016 is entering into 
+Jan 19, 2023 11:10:38 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Cancel- Enter VIN No ***
+Jan 19, 2023 11:10:41 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Cancel- click on Search ***
+Jan 19, 2023 11:10:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Add Vehicle again - Enter Vehicle Color ***
+Jan 19, 2023 11:11:06 AM com.celtic.automation.cmcs.util.ElementUtil getTitle
+INFO: Title is :Vehicle Renewal Entry - IRP
+Jan 19, 2023 11:11:06 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Screen is in Vehicle Renewal Entry Screen
+Jan 19, 2023 11:11:22 AM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (a983ae81d32c5bf1c64967060d305273)] -> xpath: //input[@id='QuaterPayment']] is selected : false
+Jan 19, 2023 11:11:52 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Click TVR ***
+Jan 19, 2023 11:11:54 AM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (a983ae81d32c5bf1c64967060d305273)] -> xpath: //input[@id='QuaterPayment']] is selected : false
+Jan 19, 2023 11:11:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Installment Plan Check Box Status ***false
+Jan 19, 2023 11:11:54 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Click Installement Plan ***
+Jan 19, 2023 11:11:56 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Select Electronic DeliveryType ***
+Jan 19, 2023 11:11:57 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Billing Comments is entering into 
+Jan 19, 2023 11:12:08 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 10 is entering into 
+Jan 19, 2023 11:12:09 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Enter ManualAdjBaseJur ***
+Jan 19, 2023 11:12:13 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Click Recalculate ***
+Jan 19, 2023 11:12:14 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Biling ScreenIRPBILL09 : [E] Manual adj. reason is required.
+Jan 19, 2023 11:12:15 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil ManualReason is entering into 
+Jan 19, 2023 11:12:16 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter ManualAdjReason Comments ***
+Jan 19, 2023 11:12:22 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPBILL79 : [E] Please do recalculation.
+Jan 19, 2023 11:12:29 AM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (a983ae81d32c5bf1c64967060d305273)] -> xpath: //input[@id='QuaterPayment']] is selected : false
+Jan 19, 2023 11:12:29 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Installment Plan Check Box Status after proceed ***false
+Jan 19, 2023 11:13:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Invoice report generated successfully.
+Jan 19, 2023 11:13:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPREP28 : [I] Billing completed successfully.
+Jan 19, 2023 11:13:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1239 : [I] TVR generated successfully.
+Jan 19, 2023 11:13:11 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment ScreenGEN24 : [I] Invoice report generated successfully.
+Jan 19, 2023 11:13:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment ScreenIRPREP28 : [I] Billing completed successfully.
+Jan 19, 2023 11:13:13 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment ScreenGEN1239 : [I] TVR generated successfully.
+Jan 19, 2023 11:13:15 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Select Delivery type***
+Jan 19, 2023 11:13:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT24 : [W] Documents are required for the Vehicle with VIN [1FTXW43R39EA68016, 4FGB120269C112391], at Vehicle Level.
+Jan 19, 2023 11:13:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Click Pay Now**
+Jan 19, 2023 11:13:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:1
+Jan 19, 2023 11:13:41 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Type***
+Jan 19, 2023 11:13:43 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Number based on Payment Type***
+Jan 19, 2023 11:13:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Payment Screen-totalAmount is 3164.13
+Jan 19, 2023 11:13:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Amount based on Payment Type***
+Jan 19, 2023 11:13:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:2
+Jan 19, 2023 11:13:45 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Type***
+Jan 19, 2023 11:13:46 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Number based on Payment Type***
+Jan 19, 2023 11:13:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Payment Screen-totalAmount is 3164.13
+Jan 19, 2023 11:13:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Payment Screen-Remaining balance is:1582.06
+Jan 19, 2023 11:13:48 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Amount based on Payment Type***
+Jan 19, 2023 11:13:49 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Enter Payment type and amount***
+Jan 19, 2023 11:14:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT24 : [E] Documents are required for the Vehicle with VIN [1FTXW43R39EA68016], at Vehicle Level.
+Jan 19, 2023 11:14:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT24 : [E] Documents are required for the Vehicle with VIN [4FGB120269C112391], at Vehicle Level.
+Jan 19, 2023 11:14:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1306 : [I] Credentials requested: 2, Credentials successful: 0, Credentials failed: 2. [Account No.:30947, Fleet No.:001, Fleet Exp. Year:2023, Fleet Exp. Month:09, Supp. No.:000]
+Jan 19, 2023 11:14:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Payment Receipt generated successfully.
+Jan 19, 2023 11:14:14 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Vehicle Document Screen-Click on Vehicle Document ***
+Jan 19, 2023 11:14:15 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 11:14:15 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Vehicle Document Screen-Enter Account Number ***
+Jan 19, 2023 11:14:16 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 11:14:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Vehicle Document Screen-Enter Fleet Number ***
+Jan 19, 2023 11:14:17 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 11:14:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Vehicle Document Screen-Enter Fleet Year ***
+Jan 19, 2023 11:14:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Vehicle Document Screen-Select HVUT ***
+Jan 19, 2023 11:14:23 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Vehicle Document Screen-Select Lease Contract ***
+Jan 19, 2023 11:14:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Vehicle Document Screen-Select Title Document ***
+Jan 19, 2023 11:14:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Vehicle Document Screen-Select Plate Return ***
+Jan 19, 2023 11:14:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT22 : [I] Documents changes were updated successfully.
+Jan 19, 2023 11:14:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1306 : [I] Credentials requested: 2, Credentials successful: 2, Credentials failed: 0. [Account No.:30947, Fleet No.:001, Fleet Exp. Year:2023, Fleet Exp. Month:09, Supp. No.:000]
+Jan 19, 2023 11:14:35 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Credential generated successfully.
+Jan 19, 2023 11:14:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT22 : [I] Documents changes were updated successfully.
+Jan 19, 2023 11:14:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1306 : [I] Credentials requested: 2, Credentials successful: 2, Credentials failed: 0. [Account No.:30947, Fleet No.:001, Fleet Exp. Year:2023, Fleet Exp. Month:09, Supp. No.:000]
+Jan 19, 2023 11:14:40 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Credential generated successfully.
+Jan 19, 2023 11:14:44 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Click on Fleet Enquiry
+Jan 19, 2023 11:14:46 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 11:14:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Enter Account Number
+Jan 19, 2023 11:14:47 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 11:14:47 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Enter Account Number
+Jan 19, 2023 11:14:53 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Click on Supplement Enquiry
+Jan 19, 2023 11:14:54 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 11:14:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 11:14:55 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 11:14:55 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 11:15:01 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Enquiry-Click on Vehicle Enquiry
+Jan 19, 2023 11:15:03 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 11:15:03 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Enquiry-Enter Account Number
+Jan 19, 2023 11:15:03 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 11:15:04 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle-Enter Expiry Year
+Jan 19, 2023 11:15:10 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Supplement Enquiry-Click on Vehicle Enquiry
+Jan 19, 2023 11:15:11 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30947 is entering into 
+Jan 19, 2023 11:15:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Supplement Enquiry-Enter Account Number
+Jan 19, 2023 11:15:12 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 11:15:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle-Enter Expiry Year
+Jan 19, 2023 11:15:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ******************************************************************TEst Execution is Passed******************************************************************************
+Jan 19, 2023 11:15:18 AM com.celtic.automation.cmcs.util.Loggers closeTheHandler
+INFO: Closing File

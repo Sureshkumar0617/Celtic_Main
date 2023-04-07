@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"da762c3c-5015-4db2-afb6-a9c6872a0b13","feature":"Renew Fleet feature","scenario":"IRP Renew fleet chrome","start":1674540328526,"group":1,"content":"","tags":"@rwc001,","end":1674541065733,"className":"passed"},{"id":"c09f0f6a-2dca-43a0-88c9-9676a329de36","feature":"Straight Renewal Fleet which is about to expire","scenario":"Straight Renewal of the fleet which is about to expire edge","start":1674541821854,"group":1,"content":"","tags":"@rwc003,","end":1674542327672,"className":"passed"},{"id":"c93d4586-d63f-4ef3-8700-411ff08e6343","feature":"Renewal after Reinstatement","scenario":"Renew with Reinstate chrome","start":1674541065887,"group":1,"content":"","tags":"@rwc002,","end":1674541821764,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
+});

@@ -1,0 +1,88 @@
+Jan 19, 2023 10:56:42 AM com.celtic.automation.cmcs.util.Loggers configureLoggerSystem
+INFO: *************************************The Execution is started********************************************************
+Jan 19, 2023 10:56:42 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO:  Test Execution is about to begin for RWC001 
+Jan 19, 2023 10:56:42 AM com.celtic.automation.cmcs.util.ConfigReader initprop
+INFO: Log information from config reader file java.io.FileInputStream@75afe44d
+Jan 19, 2023 10:56:58 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001_URL is Loading
+Jan 19, 2023 10:56:59 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil internaluser is entering into 
+Jan 19, 2023 10:56:59 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001_internaluser  has been entered sucssesfully 
+Jan 19, 2023 10:57:00 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Shine@48 is entering into 
+Jan 19, 2023 10:57:00 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001_Shine@48  has been entered sucssesfully 
+Jan 19, 2023 10:57:03 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001*Click Login *
+Jan 19, 2023 10:57:28 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001* Click IRP *
+Jan 19, 2023 10:57:30 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001* Click RenewFleet *
+Jan 19, 2023 10:57:32 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 30751 is entering into 
+Jan 19, 2023 10:57:32 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001* Enter Account Number *
+Jan 19, 2023 10:57:33 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 10:57:33 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Enter FleetNo *
+Jan 19, 2023 10:57:33 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2022 is entering into 
+Jan 19, 2023 10:57:34 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Click FleetYear *
+Jan 19, 2023 10:57:39 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT143 : [W] Fleet information [USDOT No., TPID, Legal Name, DBA Name, Business Address] in the system does not match with the MCE information.
+Jan 19, 2023 10:58:10 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Check Email Notification *
+Jan 19, 2023 10:58:11 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil AccountsComments is entering into 
+Jan 19, 2023 10:58:12 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001* Enter Comments *
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] TPID has been updated based on the MCE information.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] Legal Name has been updated based on the MCE information.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] DBA Name has been updated based on the MCE information.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] Business Address has been updated based on the MCE information.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT129 : [I] Account has 0 power unit fleet(s) for 2023. Account has 1 power unit fleet(s) for 2022.
+Jan 19, 2023 10:59:17 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 10:59:18 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: RWC001Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 10:59:19 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * navigateToServiceProvider *
+Jan 19, 2023 10:59:20 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Click PowerofAttroney *
+Jan 19, 2023 10:59:21 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil test@celtic.bz is entering into 
+Jan 19, 2023 10:59:21 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Entering the Emailid *
+Jan 19, 2023 10:59:22 AM com.celtic.automation.cmcs.util.ExcelUtil getCellData
+INFO: Error in ReadExcelUtiljava.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.getCellType()" because "this.cell" is null
+Jan 19, 2023 10:59:22 AM com.celtic.automation.cmcs.util.ExcelUtil getCellData
+INFO: Error in ReadExcelUtiljava.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFCell.getCellType()" because "this.cell" is null
+Jan 19, 2023 10:59:23 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting the IRPRequirementForm *
+Jan 19, 2023 10:59:24 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting StatementofUnderstanding *
+Jan 19, 2023 10:59:25 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting InstallmentAgreement *
+Jan 19, 2023 10:59:26 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting PowerOfAttroney *
+Jan 19, 2023 10:59:27 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting HVUTForm *
+Jan 19, 2023 10:59:29 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Selecting PropertyTax *
+Jan 19, 2023 10:59:30 AM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil FleettabComments is entering into 
+Jan 19, 2023 10:59:32 AM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: * Enter Comments *
+Jan 19, 2023 10:59:50 AM com.celtic.automation.cmcs.util.Loggers closeTheHandler
+INFO: Closing File

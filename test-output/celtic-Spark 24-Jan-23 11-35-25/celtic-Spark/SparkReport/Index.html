@@ -1,0 +1,1652 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Celtic Reports</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Grasshopper Report</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 24, 2023 11:35:25 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 24, 2023 11:35:25 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 24, 2023 12:08:47 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>3</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'><b>106</b> steps passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Renew Fleet feature":737.019,"Renewal after Reinstatement":755.869,"Straight Renewal Fleet which is about to expire":505.813
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@RWC003</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@RWC001</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@RWC002</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>AppName</td>
+<td>Celtic Project</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Upstream GS</td>
+</tr>
+<tr>
+<td>build</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Microsoft Windows 11</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 3,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 106,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@RWC003</a><a class="dropdown-item" href="#">@RWC001</a><a class="dropdown-item" href="#">@RWC002</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Renew Fleet feature</p>
+            <p class="text-sm">
+              <span>11:35:28 AM</span> / <span>00:12:17:019</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Renew Fleet feature</h5>
+<span class='badge badge-success'>01.24.2023 11:35:28 AM</span>
+<span class='badge badge-danger'>01.24.2023 11:47:45 AM</span>
+<span class='badge badge-default'>00:12:17:019</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>IRP Renew fleet chrome</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.internalUserLogin()">
+                <span>Given User login as a Internal user</span>
+      <div>Launch the application using URL and login with valid credentials
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded1.png' src="../embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.irpLink()">
+                <span>When User will navigate to the IRPLink</span>
+      <div>Expand the Services header on the left column of the screen and select IRP
+      </div>
+      <div>Click on Renew fleet from Fleet card menu.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded2.png' src="../embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.accountNumberDetails()">
+                <span>Then User will provide all the Account Number Details to start with IRP Transaction</span>
+      <div>Enter valid search data and click to proceed
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded3.png' src="../embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.accountSectionNavigation()">
+                <span>Then User will navigate to account section and fill the data</span>
+      <div>Enter valid all detail in account page with comments and click on proceed button
+      </div>
+      <div>Click on proceed from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded4.png' src="../embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.fleetSectionNavigation(java.lang.String)">
+                <span>Then User will navigate to Fleet section and fill the data and validate message  "IRPACC00 : [I] Renewal account has been generated."</span>
+      <div>Message in Fleet ScreenIRPACC00 : [I] Renewal account has been generated.
+      </div>
+      <div>Enter update all the mandatory and valid details in fleet page. Also update Fleet Expiration Date & Fleet Type & Commodity Class and click on proceed button after entering comments
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded5.png' src="../embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.distanceSectionNavigation(java.lang.String,java.lang.String)">
+                <span>Then User will navigate to Distance section and fill the data and validate message "IRPFLT01 : [I] Renewal fleet has been generated." "[I] MCE: IRP status successfully updated."</span>
+      <div>Select Actual Distance radio button & Enter all the mandatory and valid details in distance page and click on proceed button after entering comments
+      </div>
+      <div>Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+      </div>
+      <div>Message in Distance Screen[I] MCE: IRP status successfully updated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded6.png' src="../embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.weightGroupSectionNavigation(java.lang.String)">
+                <span>Then User will navigate to Weight group section and fill the data ans validate message "IRPMLG13 : [I] Renewal Distance has been generated."</span>
+      <div>Click on Add weight group button Add new Weight Group(s) & enter all the mandatory and valid details in the weight group page and click on proceed button
+      </div>
+      <div>Update an existing Weight Group & enter comments
+      </div>
+      <div>Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>Click Done
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded7.png' src="../embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.amendVehicleNavigation(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then User will navigate to Ammend vehicle and validate the message "IRPVEH375 : [I] Please search the VIN first to process a vehicle." "IRPVEH491 : [W] New Plate Required flag set for this vehicle to Yes." "IRPVEH004 : [I] Vehicle amended successfully."</span>
+      <div>Complete Amend vehicle  and edit Ownership Details Safety USDOT and TIN and change Weight Group such that New Plate is requested Also request TVR and enter comments Delete Vehicle(s) such that all Documents are collected and Comments entered
+      </div>
+      <div>Message in Amend Vehicle ScreenIRPVEH375 : [I] Please search the VIN first to process a vehicle.
+      </div>
+      <div>Message in Amend Vehicle Screennull
+      </div>
+      <div>Message in Amend Vehicle Screen IRPVEH004 : [I] Vehicle amended successfully.
+      </div>
+      <div>Message in Amend Vehicle Screennull
+      </div>
+      <div>Message in Amend Vehicle Screen IRPVEH004 : [I] Vehicle amended successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded8.png' src="../embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.deleteVehicle(java.lang.String)">
+                <span>Then User will Delete vehicle as per the requiremnet and validate the message "IRPVEH246 : [I] Vehicle(s) deleted successfully."</span>
+      <div>Cancel the  Delete Vehicle 
+      </div>
+      <div>Message in Delete Vehicle ScreenIRPVEH246 : [I] Vehicle(s) deleted successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded9.png' src="../embedded9.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.vehicleListNavigation(java.lang.String)">
+                <span>And User will navigate to vehicle list to cancel the existing amended vehicle and amend it again "GEN1062 : [I] Cancellation completed successfully"</span>
+      <div>Go to Vehicle List and update Amended  Vehicle details
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded10.png' src="../embedded10.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.cancelExistingVehicle(java.lang.String)">
+                <span>Then User will navigate to vehicle list to cancel the existing deleted vehicle and delete it again "GEN1062 : [I] Cancellation completed successfully"</span>
+      <div>Go to Vehicle List and update/cancel  Deleted Vehicle details
+      </div>
+      <div>Message in Vehicle Cancel Screennull
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded11.png' src="../embedded11.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.billingNavigation(java.lang.String)">
+                <span>Then User will navigate to billing to verify as well to adjust the cost & Waive Fees "IRPBILL09 : [E] Manual adj. reason is required."</span>
+      <div>Click Done from the supplement selection page
+      </div>
+      <div>Check Installment Payment checkbox
+      </div>
+      <div>Message in Biling ScreenIRPBILL09 : [E] Manual adj. reason is required.
+      </div>
+      <div>Click on proceed button
+      </div>
+      <div>Manually Adjust & Waive Fees with comments & set Delivery Types as PDF
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded12.png' src="../embedded12.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.paymentTabNavigation(java.lang.String,java.lang.String,java.lang.String)">
+                <span>And User will navigate to Payment Tab to input the data and validate message "GEN24 : [I] Invoice report generated successfully." "IRPREP28 : [I] Billing completed successfully." "GEN1239 : [I] TVR generated successfully."</span>
+      <div>Verify the page & set Delivery Types as PDF Click on proceed button
+      </div>
+      <div>Message in Payment ScreenGEN24 : [I] Invoice report generated successfully.
+      </div>
+      <div>Message in Payment ScreenIRPREP28 : [I] Billing completed successfully.
+      </div>
+      <div>Message in Payment ScreenGEN1239 : [I] TVR generated successfully.
+      </div>
+      <div>Verify the page & Click Add to Cart button
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded13.png' src="../embedded13.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.supplementContinuanceNavigation(java.lang.String)">
+                <span>Then User will navigate to supplement continuance and validate the meesage "GENPAY01 : [E] This transaction already exists in the cart."</span>
+      <div>Go to Supplment Continuance & try to continue above record
+      </div>
+      <div>Message in Fleet ScreenGENPAY01 : [E] This transaction already exists in the cart.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded14.png' src="../embedded14.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.paymentTabNavigation()">
+                <span>Then User will navigate to payment tab and fill the requirement</span>
+      <div>Click Cart icon
+      </div>
+      <div>Select record & proceed
+      </div>
+      <div>Click on pay now button
+      </div>
+      <div>Click Proceed
+      </div>
+      <div>Select multiple payment types and select PDF delivery type and click on proceed button
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded15.png' src="../embedded15.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.messageValidation(java.lang.String,java.lang.String)">
+                <span>And user will validate message "Payment Receipt generated successfully" "Credentials generated successfully."</span>
+      <div>Message in Payment Screen Payment Receipt generated successfully
+      </div>
+      <div>Message in Payment Screen Credentials generated successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded16.png' src="../embedded16.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.amountVerification(java.lang.String,java.lang.String)">
+                <span>Then user should land on the installement payment and verify the amount and then proceed "Payment completed successfully." "Payment Receipt generated successfully"</span>
+      <div>Go to Payment - Installment Payment & serach above record & complete 2nd Installment payment
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded17.png' src="../embedded17.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC001.inquiriesAndReportsVerification()">
+                <span>And User will navigate to all the inquiries and report with respect to the flow for verification.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC001.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded18.png' src="../embedded18.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="42"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Renewal after Reinstatement</p>
+            <p class="text-sm">
+              <span>11:47:45 AM</span> / <span>00:12:35:869</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Renewal after Reinstatement</h5>
+<span class='badge badge-success'>01.24.2023 11:47:45 AM</span>
+<span class='badge badge-danger'>01.24.2023 12:00:21 PM</span>
+<span class='badge badge-default'>00:12:35:869</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Renew with Reinstate chrome</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.login()">
+                <span>Given Login as Internal user</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded19.png' src="../embedded19.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateReinstateFleet()">
+                <span>When User will navigate to IRP & Reinstate Fleet</span>
+      <div>Expand the Services header on the left column of the screen and select IRP
+      </div>
+      <div>Click on Fleet Reinstatement  from Fleet card menu.
+      </div>
+      <div>Enter valid search data and click to proceed
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded20.png' src="../embedded20.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateDistanceIRP(java.lang.String)">
+                <span>Then User will move to Distance page & validate the message "[I] MCE: IRP status successfully updated."</span>
+      <div>click on proceed button from Reinstatement-Distance Screen
+      </div>
+      <div>Message in Distance Screen[I] MCE: IRP status successfully updated.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded21.png' src="../embedded21.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateBillingIRP()">
+                <span>Then User will navigate to billing Page & verify the information</span>
+      <div>click on proceed button from Reinstatement-Billing Screen
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded22.png' src="../embedded22.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.successMessage(java.lang.String)">
+                <span>And User will validate the Success Information Message "IRPBILL01 : [I] Reinstatement process completed successfully."</span>
+      <div>Message in Distance ScreenIRPBILL01 : [I] Reinstatement process completed successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded23.png' src="../embedded23.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateRenewal()">
+                <span>Then User will navigate to the Renewal Screen</span>
+      <div>Expand the Services header on the left column of the screen and select IRP
+      </div>
+      <div>Click on Renew fleet from Fleet card menu.
+      </div>
+      <div>Enter valid search data and click to proceed
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded24.png' src="../embedded24.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateAccountRenew()">
+                <span>Then User will navigate to Account screen under IRP and provides all the required input to proceed</span>
+      <div>Enter valid all detail in account page with comments and click on proceed button
+      </div>
+      <div>Click on proceed from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded25.png' src="../embedded25.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateFleetRenew(java.lang.String)">
+                <span>Then user will navigate to Fleet to input the data and validate the message "IRPACC00 : [I] Renewal account has been generated."</span>
+      <div>Message in Fleet ScreenIRPACC00 : [I] Renewal account has been generated.
+      </div>
+      <div>Enter update all the mandatory and valid details in fleet page. Also update Fleet Expiration Date & Fleet Type & Commodity Class and click on proceed button after entering comments
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded26.png' src="../embedded26.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateDistanceRenew(java.lang.String,java.lang.String)">
+                <span>Then user will navigate to Distance to input the data and validate message "IRPFLT01 : [I] Renewal fleet has been generated." "[I] MCE: IRP status successfully updated."</span>
+      <div>Select Actual Distance radio button & Enter all the mandatory and valid details in distance page and click on proceed button after entering comments
+      </div>
+      <div>Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+      </div>
+      <div>Message in Distance Screen[I] MCE: IRP status successfully updated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded27.png' src="../embedded27.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.addWeightGrpRenew(java.lang.String)">
+                <span>Then user will navigate to Weight Group to add weight group "IRPMLG13 : [I] Renewal Distance has been generated."</span>
+      <div>Click on Add weight group button Add new Weight Group(s) & enter all the mandatory and valid details in the weight group page and click on proceed button
+      </div>
+      <div>Update an existing Weight Group & enter comments
+      </div>
+      <div>Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded28.png' src="../embedded28.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.amendWeightGroup()">
+                <span>And user will amend the existing weight group</span>
+      <div>Click Done
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded29.png' src="../embedded29.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateAndAddVehiclesRenew(java.lang.String,java.lang.String)">
+                <span>Then user will navigate to Vehicle screen and add the vehicles that was previously deleted in expired year and validate the message "IRPVEH375 : [I] Please search the VIN first to process a vehicle." "IRPVEH004 : [I] Vehicle amended successfully."</span>
+      <div>Complete Amend vehicle  and edit Ownership Details Safety USDOT and TIN and change Weight Group such that New Plate is requested Also request TVR and enter comments Delete Vehicle(s) such that all Documents are collected and Comments entered
+      </div>
+      <div>Message in Add Vehicle ScreenIRPVEH375 : [I] Please search the VIN first to process a vehicle.
+      </div>
+      <div>Message in Add Vehicle Screen null
+      </div>
+      <div>Message in Add Vehicle Screen null
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded30.png' src="../embedded30.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.vehicleListUpdateRenew(java.lang.String)">
+                <span>And user will navigate to vehicle list to update the added vehicle details and validate message "IRPVEH004 : [I] Vehicle amended successfully."</span>
+      <div>Cancel the Added Vehicle 
+      </div>
+      <div>Go to Vehicle List and update/cancel  Vehicle details
+      </div>
+      <div>Message in Vehicle Cancel Screennull
+      </div>
+      <div>Message in Vehicle Cancel Screennull
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded31.png' src="../embedded31.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.vehicleListModifyRecentlyAddedVehicle()">
+                <span>And user will navigate to vehicle list to modify the added vehicle details</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded32.png' src="../embedded32.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigateBillingRenew(java.lang.String)">
+                <span>Then User will navigate to billing to verify as well to waive fees and adjust the cost fees "IRPBILL09 : [E] Manual adj. reason is required."</span>
+      <div>Click Done from the supplement selection page
+      </div>
+      <div>Check Installment Payment checkbox
+      </div>
+      <div>Message in Biling ScreenIRPBILL09 : [E] Manual adj. reason is required.
+      </div>
+      <div>Click on proceed button
+      </div>
+      <div>Manually Adjust & Waive Fees with comments & set Delivery Types as PDF
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded33.png' src="../embedded33.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.navigatePaymentRenew(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then User will navigate to Payment Tab to input the fields and validate message "GEN24 : [I] Invoice report generated successfully." "IRPREP28 : [I] Billing completed successfully." "GEN1239 : [I] TVR generated successfully."</span>
+      <div>Verify the page & set Delivery Types as PDF Click on proceed button
+      </div>
+      <div>Message in Payment ScreenGEN24 : [I] Invoice report generated successfully.
+      </div>
+      <div>Message in Payment ScreenIRPREP28 : [I] Billing completed successfully.
+      </div>
+      <div>Message in Payment ScreenGEN1239 : [I] TVR generated successfully.
+      </div>
+      <div>Payment Screen-CClick pay Now
+      </div>
+      <div>Select multiple payment types and select PDF delivery type and click on proceed button
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded34.png' src="../embedded34.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.vehicleDocumentCredentials(java.lang.String)">
+                <span>Then User will navigate will collect all vehicle level documents from Vehicle Documents "Credentials generated successfully"</span>
+      <div>Collect Vehicle Level Documents
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded35.png' src="../embedded35.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.secondInstallmentPayment(java.lang.String,java.lang.String)">
+                <span>Then user will navigate to Payment page for 2nd installment and validate message "Payment Receipt generated successfully" "Payment completed successfully."</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded36.png' src="../embedded36.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC002.inquiriesAndReportsValidation()">
+                <span>And User will navigate to all the inquiries and report with respect to the flow for validation.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC002.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded37.png' src="../embedded37.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="85"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Straight Renewal Fleet which is about to expire</p>
+            <p class="text-sm">
+              <span>12:00:21 PM</span> / <span>00:08:25:813</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Straight Renewal Fleet which is about to expire</h5>
+<span class='badge badge-success'>01.24.2023 12:00:21 PM</span>
+<span class='badge badge-danger'>01.24.2023 12:08:47 PM</span>
+<span class='badge badge-default'>00:08:25:813</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=85</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="86"><span class="badge log pass-bg mr-2">Pass</span>Straight Renewal of the fleet which is about to expire edge</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.loginIRP()">
+                <span>Given login user as Internal</span>
+      <div>Launch the application using URL and login with valid credentials
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded38.png' src="../embedded38.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.navigateIRP()">
+                <span>When User will navigate to IRP option</span>
+      <div>Expand the Services header on the left column of the screen and select IRP
+      </div>
+      <div>Click on Renew fleet from Fleet card menu.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded39.png' src="../embedded39.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.renewFleetIRP()">
+                <span>Then User navigate to renew fleet to input the required information</span>
+      <div>Enter valid search data and click to proceed
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded40.png' src="../embedded40.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.accountRenew()">
+                <span>Then User will input the data for account screen  and validate message</span>
+      <div>Enter valid all detail in account page with comments and click on proceed button
+      </div>
+      <div>Click on proceed from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded41.png' src="../embedded41.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.navigateToFleet(java.lang.String)">
+                <span>Then User will navigate to fleet  screen and update the required information "IRPACC00 : [I] Renewal account has been generated."</span>
+      <div>Message in Fleet ScreenIRPACC00 : [I] Renewal account has been generated.
+      </div>
+      <div>Enter update all the mandatory and valid details in fleet page. Also update Fleet Expiration Date & Fleet Type & Commodity Class and click on proceed button after entering comments
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded42.png' src="../embedded42.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.navigateToDistance(java.lang.String,java.lang.String)">
+                <span>Then User will navigate to distance to input the data and validate message "IRPFLT01 : [I] Renewal fleet has been generated." "[I] MCE: IRP status successfully updated."</span>
+      <div>Select Actual Distance radio button & Enter all the mandatory and valid details in distance page and click on proceed button after entering comments
+      </div>
+      <div>Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+      </div>
+      <div>Message in Distance Screen[I] MCE: IRP status successfully updated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded43.png' src="../embedded43.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.navigateToWeightGrp(java.lang.String)">
+                <span>Then User will navigate to weight group to add the new weight group "IRPMLG13 : [I] Renewal Distance has been generated."</span>
+      <div>Click on Add weight group button Add new Weight Group(s) & enter all the mandatory and valid details in the weight group page and click on proceed button
+      </div>
+      <div>Update an existing Weight Group & enter comments
+      </div>
+      <div>Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>Click on proceed button from the verification page
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded44.png' src="../embedded44.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.existingWeightAmendment()">
+                <span>And User will update the existing weight group to proceed</span>
+      <div>Click Done
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded45.png' src="../embedded45.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.navigateToVehicle()">
+                <span>Then User will navigate to vehicle screen and proceed further</span>
+      <div>Complete Amend vehicle  and edit Ownership Details Safety USDOT and TIN and change Weight Group such that New Plate is requested Also request TVR and enter comments Delete Vehicle(s) such that all Documents are collected and Comments entered
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded46.png' src="../embedded46.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.billingAndInstallment()">
+                <span>Then User will navigate to billing to input data and avail installment plan</span>
+      <div>Click Done from the supplement selection page
+      </div>
+      <div>CBilling-heck Installment Payment checkbox
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded47.png' src="../embedded47.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.paymentTabRenew(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then User will navigate to payment tab to input the fields and validate message "GEN24 : [I] Invoice report generated successfully." "IRPREP28 : [I] Billing completed successfully." "GEN1239 : [I] TVR generated successfully."</span>
+      <div>Verify the page & set Delivery Types as PDF Click on proceed button
+      </div>
+      <div>Message in Payment ScreenGEN24 : [I] Invoice report generated successfully.
+      </div>
+      <div>Message in Payment ScreenIRPREP28 : [I] Billing completed successfully.
+      </div>
+      <div>Message in Payment ScreenGEN1239 : [I] TVR generated successfully.
+      </div>
+      <div>Payment Screen-CClick pay Now
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded48.png' src="../embedded48.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.paymentType()">
+                <span>Then User will select the payment type and fill the requirement</span>
+      <div>Select multiple payment types and select PDF delivery type and click on proceed button
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded49.png' src="../embedded49.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.validateMessage(java.lang.String,java.lang.String,java.lang.String)">
+                <span>Then User will validate message "Payment Receipt generated successfully" "Credentials generated successfully." "IRPBILL89 : [E] All the required documents are not collected at Fleet Level"</span>
+      <div>Message in Payment Screen Payment Receipt generated successfully
+      </div>
+      <div>Message in Payment Screen Credentials generated successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded50.png' src="../embedded50.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.vehicleDocument(java.lang.String)">
+                <span>Then User will navigate to supplement documents to collect the document "Documents changes were updated successfully"</span>
+      <div>Collect all vehicle level documents from Supplement documents
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded51.png' src="../embedded51.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.paymentSecondInstallment(java.lang.String,java.lang.String)">
+                <span>Then User will navigate to payment page for second installment and validate message "Payment Receipt generated successfully" "Payment completed successfully."</span>
+      <div>Go to Payment - Installment Payment & serach above record & complete 2nd Installment payment
+      </div>
+      <div>Message in Installment Payment Screen Payment Receipt generated successfully
+      </div>
+      <div>Message in Installment Payment Screen Payment completed successfully.
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded52.png' src="../embedded52.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.celtic.automation.cmcs.parallel.RWC003.inquiriesAndReports()">
+                <span>And User will validate all the inquiries and report with respect to the flow.</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.celtic.automation.cmcs.parallel.RWC003.as(io.cucumber.java.Scenario)</span>
+      <div>anyname
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../embedded53.png' src="../embedded53.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@RWC003</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RWC003</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:00:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='85' id='86'>Straight Renewal of the fleet which is about to expire edge</a>
+<div class="">
+<span class="badge badge-default">Straight Renewal Fleet which is about to expire.Straight Renewal of the fleet which is about to expire edge</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@RWC001</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RWC001</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:35:28 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>IRP Renew fleet chrome</a>
+<div class="">
+<span class="badge badge-default">Renew Fleet feature.IRP Renew fleet chrome</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@RWC002</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RWC002</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>11:47:45 AM</td>
+<td>
+<a href="#" class="linked" test-id='42' id='43'>Renew with Reinstate chrome</a>
+<div class="">
+<span class="badge badge-default">Renewal after Reinstatement.Renew with Reinstate chrome</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

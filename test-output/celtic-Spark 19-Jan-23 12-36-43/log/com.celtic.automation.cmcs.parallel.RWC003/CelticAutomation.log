@@ -1,0 +1,386 @@
+Jan 19, 2023 12:36:49 PM com.celtic.automation.cmcs.util.Loggers configureLoggerSystem
+INFO: *************************************The Execution is started********************************************************
+Jan 19, 2023 12:36:49 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Test Execution is about to begin ***
+Jan 19, 2023 12:36:49 PM com.celtic.automation.cmcs.util.ConfigReader initprop
+INFO: Log information from config reader file java.io.FileInputStream@120df27d
+Jan 19, 2023 12:37:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ****************************** Login to the application  *****************************************
+Jan 19, 2023 12:37:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC003-Launch the application using URL
+Jan 19, 2023 12:37:14 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil internaluser is entering into 
+Jan 19, 2023 12:37:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Username ***
+Jan 19, 2023 12:37:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC003-Enter Username
+Jan 19, 2023 12:37:15 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Shine@48 is entering into 
+Jan 19, 2023 12:37:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Password ***
+Jan 19, 2023 12:37:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC003-Enter password
+Jan 19, 2023 12:37:18 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click Login ***
+Jan 19, 2023 12:37:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: **RWC003-click on Login
+Jan 19, 2023 12:37:47 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click IRP ***
+Jan 19, 2023 12:37:50 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click RenewFleet ***
+Jan 19, 2023 12:37:51 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:37:51 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Account Number ***
+Jan 19, 2023 12:37:51 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 12:37:52 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter FleetNo ***
+Jan 19, 2023 12:37:52 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2022 is entering into 
+Jan 19, 2023 12:37:52 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click FleetYear ***
+Jan 19, 2023 12:37:58 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT143 : [W] Fleet information [USDOT No., TPID] in the system does not match with the MCE information.
+Jan 19, 2023 12:38:20 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Check Email Notification ***
+Jan 19, 2023 12:38:20 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Accounts Comments is entering into 
+Jan 19, 2023 12:38:22 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 12:39:20 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] USDOT No. has been updated based on the MCE information.
+Jan 19, 2023 12:39:20 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1292 : [I] TPID has been updated based on the MCE information.
+Jan 19, 2023 12:39:20 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT129 : [I] Account has 0 power unit fleet(s) for 2023. Account has 1 power unit fleet(s) for 2022.
+Jan 19, 2023 12:39:20 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 12:39:21 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Fleet Screen IRPACC00 : [I] Renewal account has been generated.
+Jan 19, 2023 12:39:21 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** navigateToServiceProvider ***
+Jan 19, 2023 12:39:22 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click PowerofAttroney ***
+Jan 19, 2023 12:39:22 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil TEST@CELTIC.COM is entering into 
+Jan 19, 2023 12:39:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Entering the Emailid ***
+Jan 19, 2023 12:39:24 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the Expiration Date ***
+Jan 19, 2023 12:39:24 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting  the Fleet Type ***
+Jan 19, 2023 12:39:25 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selectng  the Commondity Class ***
+Jan 19, 2023 12:39:25 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the IRPRequirementForm ***
+Jan 19, 2023 12:39:26 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting StatementofUnderstanding ***
+Jan 19, 2023 12:39:27 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting InstallmentAgreement ***
+Jan 19, 2023 12:39:27 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting PowerOfAttroney ***
+Jan 19, 2023 12:39:28 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting the IRPRequirementForm ***
+Jan 19, 2023 12:39:28 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting StatementofUnderstanding ***
+Jan 19, 2023 12:39:29 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting InstallmentAgreement ***
+Jan 19, 2023 12:39:29 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting PowerOfAttroney ***
+Jan 19, 2023 12:39:30 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting HVUTForm ***
+Jan 19, 2023 12:39:31 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting PropertyTax ***
+Jan 19, 2023 12:39:31 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil FleettabComments is entering into 
+Jan 19, 2023 12:39:32 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 12:41:55 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 12:41:55 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: [I] MCE: IRP status successfully updated.
+Jan 19, 2023 12:41:55 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 12:41:56 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Distance ScreenIRPFLT01 : [I] Renewal fleet has been generated.
+Jan 19, 2023 12:41:57 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Selecting yes or No of Reporting period Question***
+Jan 19, 2023 12:41:57 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Distance tab Comments is entering into 
+Jan 19, 2023 12:41:58 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter Comments ***
+Jan 19, 2023 12:42:11 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP NO.
+Jan 19, 2023 12:42:11 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues1
+Jan 19, 2023 12:42:13 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP TYPE
+Jan 19, 2023 12:42:13 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavaluesP - POWER UNIT
+Jan 19, 2023 12:42:13 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesBASE JURISDICTION WEIGHT
+Jan 19, 2023 12:42:13 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues80000
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesMAX GROSS WEIGHT
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues80000
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervalues
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP NO.
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues2
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP TYPE
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavaluesT - TRAILER
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesBASE JURISDICTION WEIGHT
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues34000
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesMAX GROSS WEIGHT
+Jan 19, 2023 12:42:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues34000
+Jan 19, 2023 12:42:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+Jan 19, 2023 12:42:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervalues
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP NO.
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues3
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesWEIGHT GROUP TYPE
+Jan 19, 2023 12:42:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavaluesB - BUS
+Jan 19, 2023 12:42:17 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesBASE JURISDICTION WEIGHT
+Jan 19, 2023 12:42:17 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues11000
+Jan 19, 2023 12:42:18 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesMAX GROSS WEIGHT
+Jan 19, 2023 12:42:18 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues11000
+Jan 19, 2023 12:42:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group headervaluesJUR WITH DIFFERENT WEIGHTS
+Jan 19, 2023 12:42:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Weight Group RowDatavalues
+Jan 19, 2023 12:42:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPMLG13 : [I] Renewal Distance has been generated.
+Jan 19, 2023 12:42:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Weight Group ScreenIRPMLG13 : [I] Renewal Distance has been generated.
+Jan 19, 2023 12:42:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click AddweightGroup ***
+Jan 19, 2023 12:42:24 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select WeightGroupType ***
+Jan 19, 2023 12:42:25 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 8 is entering into 
+Jan 19, 2023 12:42:25 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter WeightGroup No ***
+Jan 19, 2023 12:42:25 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select MaxGross Weight ***
+Jan 19, 2023 12:42:35 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Click AddweightGroup ***
+Jan 19, 2023 12:42:36 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select WeightGroupType ***
+Jan 19, 2023 12:42:37 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 6 is entering into 
+Jan 19, 2023 12:42:37 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Enter WeightGroup No ***
+Jan 19, 2023 12:42:38 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Select MaxGross Weight ***
+Jan 19, 2023 12:42:49 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 79999 is entering into 
+Jan 19, 2023 12:42:51 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 79999 is entering into 
+Jan 19, 2023 12:42:52 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 79999 is entering into 
+Jan 19, 2023 12:43:26 PM com.celtic.automation.cmcs.util.ElementUtil getTitle
+INFO: Title is :Billing - IRP
+Jan 19, 2023 12:43:40 PM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (b4c3783e39f3a96a568c3e26114a2564)] -> xpath: //input[@id='QuaterPayment']] is selected : false
+Jan 19, 2023 12:44:14 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Click TVR ***
+Jan 19, 2023 12:44:15 PM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (b4c3783e39f3a96a568c3e26114a2564)] -> xpath: //input[@id='QuaterPayment']] is selected : false
+Jan 19, 2023 12:44:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Billing- Installment Plan Check Box Status ***false
+Jan 19, 2023 12:44:15 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Click Installement Plan ***
+Jan 19, 2023 12:44:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Select Electronic DeliveryType ***
+Jan 19, 2023 12:44:16 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil Billing Comments is entering into 
+Jan 19, 2023 12:44:31 PM com.celtic.automation.cmcs.util.ElementUtil isElementSelected
+INFO: [[EdgeDriver: msedge on WINDOWS (b4c3783e39f3a96a568c3e26114a2564)] -> xpath: //input[@id='QuaterPayment']] is selected : true
+Jan 19, 2023 12:44:31 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Billing-Installment Plan Check Box Status ***true
+Jan 19, 2023 12:45:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN4138 : [E] Failed to send the Email to test@celtic.com.
+Jan 19, 2023 12:45:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Invoice report generated successfully.
+Jan 19, 2023 12:45:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment ScreenGEN24 : [I] Invoice report generated successfully.
+Jan 19, 2023 12:45:24 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment Screennull
+Jan 19, 2023 12:45:24 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment Screennull
+Jan 19, 2023 12:45:25 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Select Delivery type***
+Jan 19, 2023 12:45:43 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Click Pay Now**
+Jan 19, 2023 12:46:01 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:1
+Jan 19, 2023 12:46:03 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Type***
+Jan 19, 2023 12:46:04 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Number based on Payment Type***
+Jan 19, 2023 12:46:05 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: totalAmount is 5544.00
+Jan 19, 2023 12:46:05 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***PPayment Screen-ayment Amount based on Payment Type***
+Jan 19, 2023 12:46:05 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:2
+Jan 19, 2023 12:46:06 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Type***
+Jan 19, 2023 12:46:06 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Payment Number based on Payment Type***
+Jan 19, 2023 12:46:07 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: totalAmount is 5544.00
+Jan 19, 2023 12:46:07 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Payment Screen-Remaining balance is:2772.00
+Jan 19, 2023 12:46:07 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***PPayment Screen-ayment Amount based on Payment Type***
+Jan 19, 2023 12:46:09 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Payment Screen-Enter Payment type and amount***
+Jan 19, 2023 12:46:21 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPBILL89 : [E] All the required documents are not collected at Fleet Level.
+Jan 19, 2023 12:46:21 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1306 : [I] Credentials requested: 6, Credentials successful: 0, Credentials failed: 6. [Account No.:27226, Fleet No.:001, Fleet Exp. Year:2023, Fleet Exp. Month:03, Supp. No.:000]
+Jan 19, 2023 12:46:21 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN24 : [I] Payment Receipt generated successfully.
+Jan 19, 2023 12:46:22 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment Screen null
+Jan 19, 2023 12:46:23 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Message in Payment Screen null
+Jan 19, 2023 12:46:34 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Click on Supplement Documents
+Jan 19, 2023 12:46:34 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:46:35 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Enter Account Number
+Jan 19, 2023 12:46:35 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 12:46:35 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Enter Fleet Number
+Jan 19, 2023 12:46:36 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:46:36 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Enter Fleet Year
+Jan 19, 2023 12:46:40 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Select IRP Requirements
+Jan 19, 2023 12:46:41 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Select Staement Documents
+Jan 19, 2023 12:46:41 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Supplement Documents- Select Installment Documents
+Jan 19, 2023 12:46:50 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: IRPDOCT22 : [I] Documents changes were updated successfully.
+Jan 19, 2023 12:46:50 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfoArray
+INFO: GEN1306 : [I] Credentials requested: 6, Credentials successful: 6, Credentials failed: 0. [Account No.:27226, Fleet No.:001, Fleet Exp. Year:2023, Fleet Exp. Month:03, Supp. No.:000]
+Jan 19, 2023 12:46:50 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment is required to do
+Jan 19, 2023 12:46:59 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Installment Payment Screen-Click on Installment Payment ***
+Jan 19, 2023 12:47:00 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:47:00 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Installment Payment Screen-Enter Account Number ***
+Jan 19, 2023 12:47:00 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 1 is entering into 
+Jan 19, 2023 12:47:01 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Installment Payment Screen-Enter Fleet Number ***
+Jan 19, 2023 12:47:01 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:47:01 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: *** Installment Payment Screen-Enter Fleet Year ***
+Jan 19, 2023 12:47:42 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:1
+Jan 19, 2023 12:47:43 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Type***
+Jan 19, 2023 12:47:44 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Number based on Payment Type***
+Jan 19, 2023 12:47:45 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment-totalAmount is 509.13
+Jan 19, 2023 12:47:45 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Amount based on Payment Type***
+Jan 19, 2023 12:47:45 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: no.of rows present is:2
+Jan 19, 2023 12:47:46 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Type***
+Jan 19, 2023 12:47:46 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Number based on Payment Type***
+Jan 19, 2023 12:47:47 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment-totalAmount is 509.13
+Jan 19, 2023 12:47:47 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment-Remaining balance is:254.56
+Jan 19, 2023 12:47:47 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Payment Amount based on Payment Type***
+Jan 19, 2023 12:47:48 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ***Installment Payment-Enter Payment type and amount***
+Jan 19, 2023 12:47:58 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment-Message in Installment Payment Screen null
+Jan 19, 2023 12:47:59 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Installment Payment-Message in Installment Payment Screen null
+Jan 19, 2023 12:48:01 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Click on Fleet Enquiry
+Jan 19, 2023 12:48:03 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:48:03 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Enter Account Number
+Jan 19, 2023 12:48:03 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:48:04 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: FleetEnquiry-Enter Account Number
+Jan 19, 2023 12:48:09 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Click on Supplement Enquiry
+Jan 19, 2023 12:48:11 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:48:11 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 12:48:11 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:48:11 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 12:48:16 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Enquiry-Click on Vehicle Enquiry
+Jan 19, 2023 12:48:18 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:48:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle Enquiry-Enter Account Number
+Jan 19, 2023 12:48:19 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:48:19 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: Vehicle-Enter Expiry Year
+Jan 19, 2023 12:48:28 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Click on Supplement Enquiry
+Jan 19, 2023 12:48:30 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 27226 is entering into 
+Jan 19, 2023 12:48:31 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 12:48:31 PM com.celtic.automation.cmcs.util.ElementUtil webEditTxtChange
+INFO: Log Info From ElementUtil 2023 is entering into 
+Jan 19, 2023 12:48:31 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: SupplementEnquiry-Enter Account Number
+Jan 19, 2023 12:48:58 PM com.celtic.automation.cmcs.util.Loggers setLoggerInfo
+INFO: ******************************************************************TEst Execution is Passed******************************************************************************
+Jan 19, 2023 12:48:58 PM com.celtic.automation.cmcs.util.Loggers closeTheHandler
+INFO: Closing File
